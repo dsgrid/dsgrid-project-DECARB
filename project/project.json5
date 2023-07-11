@@ -4,18 +4,30 @@
     name: 'U.S. DOE DECARB High Resolution Load Projections 2023',
     datasets: [
         {
-            dataset_id: '',
+            dataset_id: 'decarb_2023_buildings',
             dataset_type: 'modeled',
+            version: '1.0.0',
             required_dimensions: {
-
+                single_dimensional: {
+                    sector: {
+                        base: ['res', 'com'],
+                    },
+                    subsector: {
+                        base: ['unspecified'],
+                    },
+                    metric: {
+                        supplemental: {
+                            name: 'building-end-uses-collapsed',
+                            record_ids: ['building_end_uses'],
+                        },
+                    }
+                }
             }
-        }
+        },
     ],
     dimensions: {
         base_dimensions: [
             {
-                // TODO: Is this the right geographic scope? (Lower 48)
-                // TODO: Is this the right default geographic resolution? (Others can be supported via supplemental mappings.)
                 type: 'geography',
                 class: 'county',
                 name: 'US Counties 2020 L48',
@@ -25,30 +37,202 @@
                 module: 'dsgrid.dimension.standard',
             },
             {
-                type: 'sector'
+                type: 'sector',
+                class: 'Sector',
+                name: 'Sectors - Com-Ind-Res-Trans',
+                display_name: 'Sector',
+                description: 'DECARB 2023 Demand Sectors; Commercial, Industrial, Residential, and Transportation',
+                file: 'dimensions/sectors.csv',
+                module: 'dsgrid.dimension.standard',
             },
             {
-                type: 'subsector'
+                type: 'subsector',
+                class: 'Subsector',
+                name: 'DECARB 2023 Demand Subsectors',
+                display_name: 'Subsector',
+                description: 'DECARB 2023 Demand Subsectors; No breakouts for buildings, vehicles by class and range, 3-digit NAICS for most manufacturing',
+                file: 'dimensions/subsectors.csv',
+                module: 'dsgrid.dimension.standard',
             },
             {
-                type: 'metric'
+                type: 'metric',
+                class: 'EnergyEndUse',
+                name: 'DECARB 2023 End Uses',
+                display_name: 'End Use',
+                description: 'DECARB 2023 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
+                file: 'dimensions/enduses.csv',
+                module: 'dsgrid.dimension.standard',
             },
             {
-                type: 'model_year'
+                type: 'model_year',
+                class: 'ModelYear',
+                name: 'DECARB 2023 Model Years',
+                display_name: 'Model Year',
+                description: 'DECARB 2023 Model Years; Biennial 2020-2030, then every 5 years to 2050',
+                file: 'dimensions/model_years.csv',
+                module: 'dsgrid.dimension.standard',
             },
             {
-                type: 'scenario'
+                type: 'scenario',
+                class: 'Scenario',
+                name: 'DECARB 2023 High-Resolution Demand Scenarios',
+                display_name: 'Scenario',
+                description: 'DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario',
+                file: 'dimensions/scenarios.csv',
+                module: 'dsgrid.dimension.standard',
             },
             {
-                type: 'time'
+                type: 'time',
+                class: 'Time',
+                frequency: 'P0DT1H0M0.000000S',
+                name: 'Time-2018-EST-hourly-periodBeginning-noLeapDayAdjustment-total',
+                display_name: 'Time EST',
+                time_type: 'datetime',
+                leap_day_adjustment: 'none',
+                description: 'Time dimension, 2018 hourly EST, hour-beginning, no Leap Day Adjustment, total value',
+                time_interval_type: 'period_beginning',
+                str_format: '%Y-%m-%d %H:%M:%S',
+                timezone: 'EasternStandard',
+                measurement_type: 'total',
+                ranges: [
+                    {
+                        start: '2018-01-01 00:00:00',
+                        end: '2018-12-31 23:00:00',
+                    },
+                ],
             },
             {
-                type: 'weather_year'
-            }
+                type: 'weather_year',
+                class: 'WeatherYear',
+                name: '2018 Weather Year',
+                display_name: 'Weather 2018',
+                description: 'Weather year, 2018 only',
+                file: 'dimensions/weather_years.csv',
+                module: 'dsgrid.dimension.standard',
+            },
         ],
-        supplemental_dimensions: [],
+        supplemental_dimensions: [
+            {
+                // For ReEDS modeling
+                type: 'geography',
+                class: 'GeographyDimensionBaseModel',
+                name: 'ReEDS PCA',
+                display_name: 'ReEDS PCA',
+                description: 'ReEDS Power Control Areas',
+                file: 'dimensions/supplemental/reeds_pca.csv',
+                module: 'dsgrid.dimension.standard',
+            },
+            {
+                // For regional reporting - Roughly aligned with EPA eGrid, which is 
+                // similar to EMM, e.g., compare Figure 6 in https://www.nrel.gov/docs/fy23osti/84916.pdf
+                // to https://www.eia.gov/outlooks/aeo/pdf/nerc_map.pdf
+                type: 'geography',
+                class: 'GeographyDimensionBaseModel',
+                name: 'Cambium GEA',
+                display_name: 'Cambium GEA',
+                description: 'Cambium Generation and Emission Assessment Regions, see https://www.nrel.gov/docs/fy23osti/84916.pdf',
+                file: 'dimensions/supplemental/cambium_gea.csv',
+                module: 'dsgrid.dimension.standard',                
+            },
+            {
+                // For regional reporting - Census Division does not align well with
+                // EMM/eGrid/GEA regions, so only report groups of states at this much 
+                // higher level
+                type: 'geography',
+                class: 'CensusRegion',
+                name: 'Census Region',
+                display_name: 'Census Region',
+                description: 'US Census Regions',
+                file: 'dimensions/supplemental/census_regions.csv',
+                module: 'dsgrid.dimension.standard',
+            }
+            {
+                type: 'geography',
+                class: 'GeographyDimensionBaseModel',
+                name: 'Contiguous United States',
+                display_name: 'CONUS',
+                description: 'Contiguous United States',
+                file: 'dimensions/supplemental/conus.csv',
+                module: 'dsgrid.dimension.standard',
+            },
+            {
+                type: 'metric',
+                class: 'EnergyEndUse',
+                name: 'building-end-uses-collapsed',
+                display_name: 'Building End Uses Collapsed',
+                description: 'Building End Uses Collapsed',
+                file: 'dimensions/supplemental/building_end_uses_collapsed',
+                module: 'dsgrid.dimension.standard',
+            },
+        ],
     },
     dimension_mappings: {
-        base_to_supplemental: [],
+        base_to_supplemental: [
+            {
+                description: 'Maps US Counties 2020 L48 to ReEDS Power Control Areas',
+                file: 'dimension_mappings/lookup_county_to_reeds_pca.csv',
+                mapping_type: 'many_to_one_aggregation',
+                from_dimension: {
+                    name: 'US Counties 2020 L48',
+                    type: 'geography',
+                },
+                to_dimension: {
+                    name: 'ReEDS PCA',
+                    type: 'geography',
+                },
+            },
+            {
+                description: 'Maps US Counties 2020 L48 to Cambium Generation and Emission Assessment (GEA) Regions',
+                file: 'dimension_mappings/lookup_county_to_cambium_gea.csv',
+                mapping_type: 'many_to_one_aggregation',
+                from_dimension: {
+                    name: 'US Counties 2020 L48',
+                    type: 'geography',
+                },
+                to_dimension: {
+                    name: 'Cambium GEA',
+                    type: 'geography',
+                },
+            },
+            {
+                description: 'Maps US Counties 2020 L48 to CensusRegion',
+                file: 'dimension_mappings/lookup_county_to_censusregion.csv',
+                mapping_type: 'many_to_one_aggregation',
+                from_dimension: {
+                    name: 'US Counties 2020 L48',
+                    type: 'geography',
+                },
+                to_dimension: {
+                    name: 'US Census Regions',
+                    type: 'geography',
+                },
+            },
+            {
+                description: 'Maps US Counties 2020 L48 to CONUS',
+                file: 'dimension_mappings/lookup_county_to_conus.csv',
+                mapping_type: 'many_to_one_aggregation',
+                from_dimension: {
+                    name: 'US Counties 2020 L48',
+                    type: 'geography',
+                },
+                to_dimension: {
+                    name: 'Contiguous United States',
+                    type: 'geography',
+                },
+            },   
+            {
+                description: 'Selector for aggregating all DECARB 2023 building end uses',
+                file: 'dimension_mappings/lookup_end_uses_to_building_end_uses.csv',
+                mapping_type: 'many_to_one_aggregation',
+                from_dimension: {
+                    name: 'DECARB 2023 End Uses',
+                    type: 'metric',
+                },
+                to_dimension: {
+                    name: 'building-end-uses-collapsed',
+                    type: 'metric',
+                },
+            },
+        ],
     }
 }
