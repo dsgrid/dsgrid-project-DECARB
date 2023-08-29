@@ -16,8 +16,10 @@ electricity_refrigeration,Refrigeration,electricity,MWh
 electricity_televisions,Televisions,electricity,MWh
 electricity_ventilation,Ventilation,electricity,MWh
 electricity_water_heating,Water Heating,electricity,MWh
-electricity_ev_dcfc,EV DCFC,electricity,MWh
-electricity_ev_l1l2,EV L1/L2,electricity,MWh
+electricity_ev_commercial_dcfc,EV Commercial DCFC,electricity,MWh
+electricity_ev_commercial_l1l2,EV Commercial L1/L2,electricity,MWh
+electricity_ev_residential_l1l2,EV Residential L1/L2,electricity,MWh
+electricity_lightrail,Light Rail,electricity,MWh
 electricity_conventional_boiler,Conventional Boiler,electricity,MWh
 fuel_oil_conventional_boiler,Conventional Boiler,fuel_oil,MBtu
 natural_gas_conventional_boiler,Conventional Boiler,natural_gas,MBtu
