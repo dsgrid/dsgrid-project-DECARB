@@ -16,10 +16,12 @@
                         base: ['unspecified'],
                     },
                     metric: {
-                        supplemental: {
-                            name: 'building-end-uses-collapsed',
-                            record_ids: ['building_end_uses'],
-                        },
+                        subset: [
+                            {
+                                name: 'End Uses by Sector',
+                                selectors: ['residential_end_uses', 'commercial_end_uses'],
+                            },
+                        ]
                     }
                 }
             }
@@ -111,6 +113,43 @@
                 module: 'dsgrid.dimension.standard',
             },
         ],
+        subset_dimensions: [
+            {
+                name: 'End Uses by Sector',
+                display_name: 'end_uses_by_sector',
+                description: 'Selects end uses by sector, with buildings split into residential and commercial, and transportation split into LDV and non-LDV.',
+                type: 'metric',
+                file: 'dimensions/subset/end_uses_by_sector.csv',
+                create_supplemental_dimensions: false,
+                selectors: [
+                    {
+                        name: 'residential_end_uses',
+                        descripton: 'Residential End Uses',
+                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+                    },
+                    {
+                        name: 'commercial_end_uses',
+                        descripton: 'Commercial End Uses',
+                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+                    },
+                    {
+                        name: 'transportation_ldv_end_uses',
+                        descripton: 'Transportation LDV End Uses',
+                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+                    },
+                    {
+                        name: 'transportation_non_ldv_end_uses',
+                        descripton: 'Transportation Non-LDV End Uses',
+                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+                    },
+                    {
+                        name: 'industrial_end_uses',
+                        descripton: 'Industrial End Uses',
+                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+                    },
+                ]
+            }
+        ],
         supplemental_dimensions: [
             {
                 // For ReEDS modeling
@@ -153,15 +192,6 @@
                 display_name: 'CONUS',
                 description: 'Contiguous United States',
                 file: 'dimensions/supplemental/conus.csv',
-                module: 'dsgrid.dimension.standard',
-            },
-            {
-                type: 'metric',
-                class: 'EnergyEndUse',
-                name: 'building-end-uses-collapsed',
-                display_name: 'Building End Uses Collapsed',
-                description: 'Building End Uses Collapsed',
-                file: 'dimensions/supplemental/building_end_uses_collapsed',
                 module: 'dsgrid.dimension.standard',
             },
         ],
@@ -220,19 +250,6 @@
                     type: 'geography',
                 },
             },   
-            {
-                description: 'Selector for aggregating all DECARB 2023 building end uses',
-                file: 'dimension_mappings/lookup_end_uses_to_building_end_uses.csv',
-                mapping_type: 'many_to_one_aggregation',
-                from_dimension: {
-                    name: 'DECARB 2023 End Uses',
-                    type: 'metric',
-                },
-                to_dimension: {
-                    name: 'building-end-uses-collapsed',
-                    type: 'metric',
-                },
-            },
         ],
     }
 }

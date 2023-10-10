@@ -35,4 +35,3 @@ electricity_chp,Combined Heat and Power,electricity,MWh
 electricity_thermal_dg,Thermal DG,electricity,MWh
 electricity_dpv,Distributed PV,electricity,MWh
 electricity_unspecified,Unspecified,electricity,MWh
-natural_gas_unspecified,Unspecified,natural_gas,MBtu
