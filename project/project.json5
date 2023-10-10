@@ -184,7 +184,7 @@
                 description: 'US Census Regions',
                 file: 'dimensions/supplemental/census_regions.csv',
                 module: 'dsgrid.dimension.standard',
-            }
+            },
             {
                 type: 'geography',
                 class: 'GeographyDimensionBaseModel',
