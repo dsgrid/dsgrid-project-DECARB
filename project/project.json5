@@ -117,7 +117,7 @@
             {
                 name: 'End Uses by Sector',
                 display_name: 'end_uses_by_sector',
-                description: 'Selects end uses by sector, with buildings split into residential and commercial, and transportation split into LDV and non-LDV.',
+                description: 'Selects end uses by sector, with buildings split into residential and commercial.',
                 type: 'metric',
                 file: 'dimensions/subset/end_uses_by_sector.csv',
                 create_supplemental_dimensions: false,
