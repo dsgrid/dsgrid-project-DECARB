@@ -31,7 +31,7 @@
         base_dimensions: [
             {
                 type: 'geography',
-                class: 'county',
+                class: 'County',
                 name: 'US Counties 2020 L48',
                 display_name: 'County',
                 description: 'US counties for L48, Census 2020 vintage, no territories',
@@ -120,31 +120,26 @@
                 description: 'Selects end uses by sector, with buildings split into residential and commercial.',
                 type: 'metric',
                 file: 'dimensions/subset/end_uses_by_sector.csv',
-                create_supplemental_dimensions: false,
+                create_supplemental_dimension: false,
                 selectors: [
                     {
                         name: 'residential_end_uses',
-                        descripton: 'Residential End Uses',
+                        description: 'Residential End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
                     },
                     {
                         name: 'commercial_end_uses',
-                        descripton: 'Commercial End Uses',
+                        description: 'Commercial End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
                     },
                     {
-                        name: 'transportation_ldv_end_uses',
-                        descripton: 'Transportation LDV End Uses',
-                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
-                    },
-                    {
-                        name: 'transportation_non_ldv_end_uses',
-                        descripton: 'Transportation Non-LDV End Uses',
+                        name: 'transportation_end_uses',
+                        description: 'Transportation LDV End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
                     },
                     {
                         name: 'industrial_end_uses',
-                        descripton: 'Industrial End Uses',
+                        description: 'Industrial End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
                     },
                 ]
@@ -233,7 +228,7 @@
                     type: 'geography',
                 },
                 to_dimension: {
-                    name: 'US Census Regions',
+                    name: 'Census Region',
                     type: 'geography',
                 },
             },
