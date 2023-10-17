@@ -155,6 +155,11 @@
                 description: 'ReEDS Power Control Areas',
                 file: 'dimensions/supplemental/reeds_pca.csv',
                 module: 'dsgrid.dimension.standard',
+                mapping: {
+                    description: 'Maps US Counties 2020 L48 to ReEDS Power Control Areas',
+                    file: 'dimension_mappings/lookup_county_to_reeds_pca.csv',
+                    mapping_type: 'many_to_one_aggregation',
+                },
             },
             {
                 // For regional reporting - Roughly aligned with EPA eGrid, which is 
@@ -166,7 +171,12 @@
                 display_name: 'Cambium GEA',
                 description: 'Cambium Generation and Emission Assessment Regions, see https://www.nrel.gov/docs/fy23osti/84916.pdf',
                 file: 'dimensions/supplemental/cambium_gea.csv',
-                module: 'dsgrid.dimension.standard',                
+                module: 'dsgrid.dimension.standard',
+                mapping: {
+                    description: 'Maps US Counties 2020 L48 to Cambium Generation and Emission Assessment (GEA) Regions',
+                    file: 'dimension_mappings/lookup_county_to_cambium_gea.csv',
+                    mapping_type: 'many_to_one_aggregation',
+                },
             },
             {
                 // For regional reporting - Census Division does not align well with
@@ -179,6 +189,11 @@
                 description: 'US Census Regions',
                 file: 'dimensions/supplemental/census_regions.csv',
                 module: 'dsgrid.dimension.standard',
+                mapping: {
+                    description: 'Maps US Counties 2020 L48 to CensusRegion',
+                    file: 'dimension_mappings/lookup_county_to_censusregion.csv',
+                    mapping_type: 'many_to_one_aggregation',
+                },
             },
             {
                 type: 'geography',
@@ -188,63 +203,12 @@
                 description: 'Contiguous United States',
                 file: 'dimensions/supplemental/conus.csv',
                 module: 'dsgrid.dimension.standard',
+                mapping: {
+                    description: 'Maps US Counties 2020 L48 to CONUS',
+                    file: 'dimension_mappings/lookup_county_to_conus.csv',
+                    mapping_type: 'many_to_one_aggregation',
+                },
             },
         ],
     },
-    dimension_mappings: {
-        base_to_supplemental: [
-            {
-                description: 'Maps US Counties 2020 L48 to ReEDS Power Control Areas',
-                file: 'dimension_mappings/lookup_county_to_reeds_pca.csv',
-                mapping_type: 'many_to_one_aggregation',
-                from_dimension: {
-                    name: 'US Counties 2020 L48',
-                    type: 'geography',
-                },
-                to_dimension: {
-                    name: 'ReEDS PCA',
-                    type: 'geography',
-                },
-            },
-            {
-                description: 'Maps US Counties 2020 L48 to Cambium Generation and Emission Assessment (GEA) Regions',
-                file: 'dimension_mappings/lookup_county_to_cambium_gea.csv',
-                mapping_type: 'many_to_one_aggregation',
-                from_dimension: {
-                    name: 'US Counties 2020 L48',
-                    type: 'geography',
-                },
-                to_dimension: {
-                    name: 'Cambium GEA',
-                    type: 'geography',
-                },
-            },
-            {
-                description: 'Maps US Counties 2020 L48 to CensusRegion',
-                file: 'dimension_mappings/lookup_county_to_censusregion.csv',
-                mapping_type: 'many_to_one_aggregation',
-                from_dimension: {
-                    name: 'US Counties 2020 L48',
-                    type: 'geography',
-                },
-                to_dimension: {
-                    name: 'Census Region',
-                    type: 'geography',
-                },
-            },
-            {
-                description: 'Maps US Counties 2020 L48 to CONUS',
-                file: 'dimension_mappings/lookup_county_to_conus.csv',
-                mapping_type: 'many_to_one_aggregation',
-                from_dimension: {
-                    name: 'US Counties 2020 L48',
-                    type: 'geography',
-                },
-                to_dimension: {
-                    name: 'Contiguous United States',
-                    type: 'geography',
-                },
-            },   
-        ],
-    }
 }
