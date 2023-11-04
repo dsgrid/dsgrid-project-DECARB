@@ -1,0 +1,28 @@
+{
+  mappings: [
+    {
+      description: "dGen county ids to project counties",
+      dimension_type: "geography",
+      file: "dimension_mappings/county_to_county.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "dgen end use to dsgrid CONUS 2023 End Uses w/ all units in kWh",
+      dimension_type: "metric",
+      file: "dimension_mappings/metric_to_metric.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "dGen scenario dataset-to-project dimension mapping for the DECARB project",
+      dimension_type: "scenario",
+      file: "dimension_mappings/scenario_to_scenario.csv",
+      mapping_type: "duplication",
+    },
+    {
+      description: "2018-2050 from interpolating for every other year",
+      dimension_type: "model_year",
+      file: "dimension_mappings/model_year_to_model_year.csv",
+      mapping_type: "many_to_many_explicit_multipliers",
+    },
+  ],
+}
