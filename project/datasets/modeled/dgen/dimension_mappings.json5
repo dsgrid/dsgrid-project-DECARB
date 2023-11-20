@@ -16,10 +16,10 @@
       description: "dGen scenario dataset-to-project dimension mapping for the DECARB project",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
-      mapping_type: "duplication",
+      mapping_type: "one_to_one",
     },
     {
-      description: "2018-2050 from interpolating for every other year",
+      description: "2024-2050 from interpolating for every other year",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "many_to_many_explicit_multipliers",
