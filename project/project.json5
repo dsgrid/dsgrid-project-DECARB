@@ -26,6 +26,30 @@
                 }
             }
         },
+        {
+            dataset_id: 'decarb_2023_dgen',
+            dataset_type: 'modeled',
+            version: '1.0.0',
+            required_dimensions: {
+                single_dimensional: {
+                    sector: {
+                        base: ['res', 'com'],
+                    },
+                    subsector: {
+                        base: ['unspecified'],
+                    },
+                    metric: {
+                        subset: [
+                            {
+                                name: 'DPV generation',
+                                selectors: [ 'electricity_dpv'],
+                            },
+                        ]
+                    }
+                }
+            }
+        },
+
     ],
     dimensions: {
         base_dimensions: [
