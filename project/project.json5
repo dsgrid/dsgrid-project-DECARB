@@ -39,12 +39,7 @@
                         base: ['unspecified'],
                     },
                     metric: {
-                        subset: [
-                            {
-                                name: 'DPV generation',
-                                selectors: [ 'electricity_dpv'],
-                            },
-                        ]
+                        base: ['electricity_dpv']
                     }
                 }
             }
