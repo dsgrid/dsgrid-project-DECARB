@@ -8,7 +8,7 @@ electricity_cooling_and_heating,Heating and Cooling,electricity,MWh
 electricity_fans_and_pumps,Fans and Pumps,electricity,MWh
 electricity_lighting,Lighting,electricity,MWh
 electricity_miscellaneous_electrical_loads,Miscellaneous Electrical Loads (MELs) & Other,electricity,MWh
-electricity_non-PC_office_equipment,Office Equipment,electricity,MWh
+electricity_non_pc_office_equipment,Non-PC Office Equipment,electricity,MWh
 electricity_pools_and_spas,Pools and Spas,electricity,MWh
 electricity_refrigeration,Refrigeration,electricity,MWh
 electricity_water_heating,Water Heating,electricity,MWh
