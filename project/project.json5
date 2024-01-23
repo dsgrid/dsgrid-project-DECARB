@@ -9,22 +9,49 @@
             version: '1.0.0',
             required_dimensions: {
                 single_dimensional: {
-                    sector: {
-                        base: ['res', 'com'],
-                    },
                     subsector: {
-                        base: ['unspecified'],
+                        base: [
+                            "unspecified",
+                        ],
                     },
-                    metric: {
-                        subset: [
-                            {
-                                name: 'End Uses by Sector',
-                                selectors: ['residential_end_uses', 'commercial_end_uses'],
-                            },
-                        ]
-                    }
-                }
-            }
+                },
+                multi_dimensional: [
+                    {
+                        sector: {
+                            base: [
+                                "com",
+                            ],
+                        },
+                        metric: {
+                            subset: [
+                                {
+                                    name: 'End Uses by Sector',
+                                    selectors: [
+                                        'commercial_end_uses',
+                                    ],
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        sector: {
+                            base: [
+                                'res',
+                            ],
+                        },
+                        metric: {
+                            subset: [
+                                {
+                                    name: 'End Uses by Sector',
+                                    selectors: [
+                                        'residential_end_uses',
+                                    ],
+                                },
+                            ],
+                        },
+                    },
+                ],
+            },
         },
     ],
     dimensions: {
