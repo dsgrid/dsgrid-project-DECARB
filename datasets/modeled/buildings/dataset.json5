@@ -2,7 +2,7 @@
   dataset_id: "decarb_2023_buildings",
   dataset_type: "modeled",
   sector_description: "residential_and_commercial_building_stock",
-  description: "High-resolution building end-use electricity load profiles for contiguous US for DECARB High Scenario, simulated using Scout (v0.9.1 — https://github.com/trynthink/scout/releases/tag/v0.9.1) on 12/20/2023, with data from ResStock (2021/resstock_amy2018_release_1) and ComStock (2021/comstock_amy2018_release_1 ",
+  description: "High-resolution building end-use electricity load profiles for contiguous US for DECARB High Scenario, simulated using Scout with end use load profile data from ResStock and ComStock.",
   origin_creator: "Aven Satre Meloy",
   origin_organization: "LBL",
   origin_contributors: [
@@ -17,8 +17,8 @@
   origin_project: "Scout",
   origin_date: "2023-12-18",
   origin_version: "v0.9.1",
-  data_source: "https://github.com/trynthink/scout/releases/tag/v0.9.1",
-  source: "", // not sure what is required here and how it differs from data_source
+  data_source: "scout",
+  source: "Scout (v0.9.1 — https://github.com/trynthink/scout/releases/tag/v0.9.1) simulation run on 12/20/2023, with data from ResStock (2021/resstock_amy2018_release_1) and ComStock (2021/comstock_amy2018_release_1)",
   data_classification: "low",
   tags: [
     "residential",
@@ -40,8 +40,8 @@
   dimensions: [
     {
       type: "geography",
-      name: "Region",
-      display_name: "Region",
+      name: "EMM Region",
+      display_name: "EMM Region",
       file: "dimensions/regions.csv",
       module: "dsgrid.dimension.standard",
       class: "GeographyDimensionBaseModel",
@@ -58,12 +58,12 @@
     },
     {
       type: "model_year",
-      name: "Model Year 2018",
-      display_name: "Model Year 2018",
+      name: "DECARB 2023 Building Model Years",
+      display_name: "DECARB 2023 Building Model Years",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
-      description: "Model year: 2018",
+      description: "Current year 2023 and future snapshot years 2030 and 2050",
     },
     {
       type: "scenario",
@@ -76,7 +76,7 @@
     },
     {
       type: "sector",
-      name: "building-sectors",
+      name: "Building Sectors",
       display_name: "Building Sectors",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
