@@ -1,13 +1,25 @@
 id,name
 unspecified,Unspecified
-bev_compact,BEV Compact
-bev_midsize,BEV Midsize
-bev_pickup,BEV Pickup
-bev_suv,BEV SUV
-phev_compact,PHEV Compact
-phev_midsize,PHEV Midsize
-phev_pickup,PHEV Pickup
-phev_suv,PHEV SUV
+LDV+Personal_LDV+Compact+BEV_200, LDV+Compact+BEV_200
+LDV+Personal_LDV+Compact+BEV_300, LDV+Compact+BEV_300
+LDV+Personal_LDV+Compact+BEV_400, LDV+Compact+BEV_400
+LDV+Personal_LDV+Compact+PHEV_25, LDV+Compact+PHEV_25
+LDV+Personal_LDV+Compact+PHEV_50, LDV+Compact+PHEV_50
+LDV+Personal_LDV+Midsize+BEV_200, LDV+Midsize+BEV_200
+LDV+Personal_LDV+Midsize+BEV_300, LDV+Midsize+BEV_300
+LDV+Personal_LDV+Midsize+BEV_400, LDV+Midsize+BEV_400
+LDV+Personal_LDV+Midsize+PHEV_25, LDV+Midsize+PHEV_25
+LDV+Personal_LDV+Midsize+PHEV_50, LDV+Midsize+PHEV_50
+LDV+Personal_LDV+Pickup+BEV_200, LDV+Pickup+BEV_200
+LDV+Personal_LDV+Pickup+BEV_300, LDV+Pickup+BEV_300
+LDV+Personal_LDV+Pickup+BEV_400, Pickup+BEV_400
+LDV+Personal_LDV+Pickup+PHEV_25, LDV+Pickup+PHEV_25
+LDV+Personal_LDV+Pickup+PHEV_50, LDV+Pickup+PHEV_50
+LDV+Personal_LDV+SUV+BEV_200, LDV+SUV+BEV_200
+LDV+Personal_LDV+SUV+BEV_300, LDV+SUV+BEV_300
+LDV+Personal_LDV+SUV+BEV_400, LDV+SUV+BEV_400
+LDV+Personal_LDV+SUV+PHEV_25, LDV+SUV+PHEV_25
+LDV+Personal_LDV+SUV+PHEV_50, LDV+SUV+PHEV_50
 bev_light_medium,BEV Light-Medium
 bev_medium,BEV Medium
 bev_non_freight_truck,BEV Non-freight truck
