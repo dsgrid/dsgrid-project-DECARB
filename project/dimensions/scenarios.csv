@@ -1,2 +1,4 @@
 id,name
 decarb_high,DECARB High
+decarb_high_unmanaged_ev_charging,DECARB High and Unmanaged EV Charging
+decarb_high_unmanaged_smooth_ev_charging,DECARB High and Unmanaged Smooth EV Charging
