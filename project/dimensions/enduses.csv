@@ -16,10 +16,16 @@ electricity_refrigeration,Refrigeration,electricity,MWh
 electricity_televisions,Televisions,electricity,MWh
 electricity_ventilation,Ventilation,electricity,MWh
 electricity_water_heating,Water Heating,electricity,MWh
-electricity_ev_commercial_dcfc,EV Commercial DCFC,electricity,MWh
-electricity_ev_commercial_l1l2,EV Commercial L1/L2,electricity,MWh
-electricity_ev_residential_l1l2,EV Residential L1/L2,electricity,MWh
-electricity_lightrail,Light Rail,electricity,MWh
+electricity_ev_res1,LD EV Residential L1,electricity,kWh
+electricity_ev_res2,LD EV Residential L2,electricity,kWh
+electricity_ev_work1,LD EV Workplace L1,electricity,kWh
+electricity_ev_work2,LD EV Workplace L2,electricity,kWh
+electricity_ev_public2,LD EV Public L2,electricity,kWh
+electricity_ev_publicdcfc,LD EV Public DCFC,electricity,kWh
+electricity_ev_enroutedcfc,LD EV Enroute DCFC,electricity,kWh
+electricity_ev_depot_mhdv_dcfc,MHD EV Depot DCFC,electricity,kWh
+electricity_ev_opportunity_mhdv_dcfc,MHD EV Opportunity DCFC,electricity,kWh
+electricity_ev_enroute_mhdv_dcfc,MHD EV Enroute DCFC,electricity,kWh
 electricity_conventional_boiler,Conventional Boiler,electricity,MWh
 electricity_process_heating,Process Heating,electricity,MWh
 electricity_process_cooling_and_refrigeration,Process Cooling and Refrigeration,electricity,MWh
