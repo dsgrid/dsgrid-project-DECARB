@@ -1,0 +1,10 @@
+﻿id,name,fuel_id,unit
+boiler,Conventional Boiler Use,electricity,kWh
+process_heating,Process Heating,electricity,kWh
+process_cooling,Process Cooling and Refrigeration,electricity,kWh
+process_machine,Machine Drive,electricity,kWh
+process_elecchem,Electro-Chemical Processes,electricity,kWh
+process_other,Other Process Use,electricity,kWh
+hvac,Facility HVAC,electricity,kWh
+lighting,Facility Lighting,electricity,kWh
+nonprocess_other,Other Nonprocess Use,electricity,kWh
