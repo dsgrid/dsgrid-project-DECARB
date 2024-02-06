@@ -12,7 +12,7 @@ LDV+Personal_LDV+Midsize+PHEV_25, LDV+Midsize+PHEV_25
 LDV+Personal_LDV+Midsize+PHEV_50, LDV+Midsize+PHEV_50
 LDV+Personal_LDV+Pickup+BEV_200, LDV+Pickup+BEV_200
 LDV+Personal_LDV+Pickup+BEV_300, LDV+Pickup+BEV_300
-LDV+Personal_LDV+Pickup+BEV_400, Pickup+BEV_400
+LDV+Personal_LDV+Pickup+BEV_400, LDV+Pickup+BEV_400
 LDV+Personal_LDV+Pickup+PHEV_25, LDV+Pickup+PHEV_25
 LDV+Personal_LDV+Pickup+PHEV_50, LDV+Pickup+PHEV_50
 LDV+Personal_LDV+SUV+BEV_200, LDV+SUV+BEV_200
@@ -20,13 +20,37 @@ LDV+Personal_LDV+SUV+BEV_300, LDV+SUV+BEV_300
 LDV+Personal_LDV+SUV+BEV_400, LDV+SUV+BEV_400
 LDV+Personal_LDV+SUV+PHEV_25, LDV+SUV+PHEV_25
 LDV+Personal_LDV+SUV+PHEV_50, LDV+SUV+PHEV_50
-bev_light_medium,BEV Light-Medium
-bev_medium,BEV Medium
-bev_non_freight_truck,BEV Non-freight truck
-bev_heavy,BEV Heavy
-bev_school_bus,BEV School Bus
-bev_transit_bus,BEV Transit Bus
-light_rail,Light Rail
+MHDV+Truck_Heavy+Local+BEV_150,
+MHDV+Truck_Heavy+Local+BEV_300,
+MHDV+Truck_Heavy_Vocational+Local+BEV_150,
+MHDV+Truck_Heavy_Vocational+Local+BEV_300,
+MHDV+Truck_Light+Local+BEV_150,
+MHDV+Truck_Light+Local+BEV_300,
+MHDV+Truck_Light_Vocational+Local+BEV_150,
+MHDV+Truck_Light_Vocational+Local+BEV_300,
+MHDV+Truck_Medium+Local+BEV_150,
+MHDV+Truck_Medium+Local+BEV_300,
+MHDV+Truck_Medium_Vocational+Local+BEV_150,
+MHDV+Truck_Medium_Vocational+Local+BEV_300,
+MHDV+Truck_Heavy+Regional+BEV_150,
+MHDV+Truck_Heavy+Regional+BEV_300,
+MHDV+Truck_Heavy_Vocational+Regional+BEV_150,
+MHDV+Truck_Heavy_Vocational+Regional+BEV_300,
+MHDV+Truck_Light+Regional+BEV_150,
+MHDV+Truck_Light+Regional+BEV_300,
+MHDV+Truck_Light_Vocational+Regional+BEV_150,
+MHDV+Truck_Light_Vocational+Regional+BEV_300,
+MHDV+Truck_Medium+Regional+BEV_150,
+MHDV+Truck_Medium+Regional+BEV_300,
+MHDV+Truck_Medium_Vocational+Regional+BEV_150,
+MHDV+Truck_Medium_Vocational+Regional+BEV_300,
+MHDV+Truck_Heavy+Long-haul+BEV_300,
+MHDV+Truck_Heavy+Long-haul+BEV_500,
+MHDV+Truck_Light+Long-haul+BEV_300,
+MHDV+Truck_Medium+Long-haul+BEV_300,
+MHDV+Truck_Medium+Long-haul+BEV_500,
+MHDV+Bus+N/A+BEV_200, BEV Buses (all bus types)
+Transit_Rail, Electric Transit Rail 
 naics_311,Food Manufacturing
 naics_312,Beverage and Tobacco Product Manufacturing
 naics_313,Textile Mills
