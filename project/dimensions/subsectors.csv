@@ -20,35 +20,35 @@ LDV+Personal_LDV+SUV+BEV_300, LDV+SUV+BEV_300
 LDV+Personal_LDV+SUV+BEV_400, LDV+SUV+BEV_400
 LDV+Personal_LDV+SUV+PHEV_25, LDV+SUV+PHEV_25
 LDV+Personal_LDV+SUV+PHEV_50, LDV+SUV+PHEV_50
-MHDV+Truck_Heavy+Local+BEV_150,
-MHDV+Truck_Heavy+Local+BEV_300,
-MHDV+Truck_Heavy_Vocational+Local+BEV_150,
-MHDV+Truck_Heavy_Vocational+Local+BEV_300,
-MHDV+Truck_Light+Local+BEV_150,
-MHDV+Truck_Light+Local+BEV_300,
-MHDV+Truck_Light_Vocational+Local+BEV_150,
-MHDV+Truck_Light_Vocational+Local+BEV_300,
-MHDV+Truck_Medium+Local+BEV_150,
-MHDV+Truck_Medium+Local+BEV_300,
-MHDV+Truck_Medium_Vocational+Local+BEV_150,
-MHDV+Truck_Medium_Vocational+Local+BEV_300,
-MHDV+Truck_Heavy+Regional+BEV_150,
-MHDV+Truck_Heavy+Regional+BEV_300,
-MHDV+Truck_Heavy_Vocational+Regional+BEV_150,
-MHDV+Truck_Heavy_Vocational+Regional+BEV_300,
-MHDV+Truck_Light+Regional+BEV_150,
-MHDV+Truck_Light+Regional+BEV_300,
-MHDV+Truck_Light_Vocational+Regional+BEV_150,
-MHDV+Truck_Light_Vocational+Regional+BEV_300,
-MHDV+Truck_Medium+Regional+BEV_150,
-MHDV+Truck_Medium+Regional+BEV_300,
-MHDV+Truck_Medium_Vocational+Regional+BEV_150,
-MHDV+Truck_Medium_Vocational+Regional+BEV_300,
-MHDV+Truck_Heavy+Long-haul+BEV_300,
-MHDV+Truck_Heavy+Long-haul+BEV_500,
-MHDV+Truck_Light+Long-haul+BEV_300,
-MHDV+Truck_Medium+Long-haul+BEV_300,
-MHDV+Truck_Medium+Long-haul+BEV_500,
+MHDV+Truck_Heavy+Local+BEV_150,MHDV+Truck_Heavy+Local+BEV_150
+MHDV+Truck_Heavy+Local+BEV_300,MHDV+Truck_Heavy+Local+BEV_300
+MHDV+Truck_Heavy_Vocational+Local+BEV_150,MHDV+Truck_Heavy_Vocational+Local+BEV_150
+MHDV+Truck_Heavy_Vocational+Local+BEV_300,MHDV+Truck_Heavy_Vocational+Local+BEV_300
+MHDV+Truck_Light+Local+BEV_150,MHDV+Truck_Light+Local+BEV_150
+MHDV+Truck_Light+Local+BEV_300,MHDV+Truck_Light+Local+BEV_300
+MHDV+Truck_Light_Vocational+Local+BEV_150,MHDV+Truck_Light_Vocational+Local+BEV_150
+MHDV+Truck_Light_Vocational+Local+BEV_300,MHDV+Truck_Light_Vocational+Local+BEV_300
+MHDV+Truck_Medium+Local+BEV_150,MHDV+Truck_Medium+Local+BEV_150
+MHDV+Truck_Medium+Local+BEV_300,MHDV+Truck_Medium+Local+BEV_300
+MHDV+Truck_Medium_Vocational+Local+BEV_150,MHDV+Truck_Medium_Vocational+Local+BEV_150
+MHDV+Truck_Medium_Vocational+Local+BEV_300,MHDV+Truck_Medium_Vocational+Local+BEV_300
+MHDV+Truck_Heavy+Regional+BEV_150,MHDV+Truck_Heavy+Regional+BEV_150
+MHDV+Truck_Heavy+Regional+BEV_300,MHDV+Truck_Heavy+Regional+BEV_300
+MHDV+Truck_Heavy_Vocational+Regional+BEV_150,MHDV+Truck_Heavy_Vocational+Regional+BEV_150
+MHDV+Truck_Heavy_Vocational+Regional+BEV_300,MHDV+Truck_Heavy_Vocational+Regional+BEV_300
+MHDV+Truck_Light+Regional+BEV_150,MHDV+Truck_Light+Regional+BEV_150
+MHDV+Truck_Light+Regional+BEV_300,MHDV+Truck_Light+Regional+BEV_300
+MHDV+Truck_Light_Vocational+Regional+BEV_150,MHDV+Truck_Light_Vocational+Regional+BEV_150
+MHDV+Truck_Light_Vocational+Regional+BEV_300,MHDV+Truck_Light_Vocational+Regional+BEV_300
+MHDV+Truck_Medium+Regional+BEV_150,MHDV+Truck_Medium+Regional+BEV_150
+MHDV+Truck_Medium+Regional+BEV_300,MHDV+Truck_Medium+Regional+BEV_300
+MHDV+Truck_Medium_Vocational+Regional+BEV_150,MHDV+Truck_Medium_Vocational+Regional+BEV_150
+MHDV+Truck_Medium_Vocational+Regional+BEV_300,MHDV+Truck_Medium_Vocational+Regional+BEV_300
+MHDV+Truck_Heavy+Long-haul+BEV_300,MHDV+Truck_Heavy+Long-haul+BEV_300
+MHDV+Truck_Heavy+Long-haul+BEV_500,MHDV+Truck_Heavy+Long-haul+BEV_500
+MHDV+Truck_Light+Long-haul+BEV_300,MHDV+Truck_Light+Long-haul+BEV_300
+MHDV+Truck_Medium+Long-haul+BEV_300,MHDV+Truck_Medium+Long-haul+BEV_300
+MHDV+Truck_Medium+Long-haul+BEV_500,MHDV+Truck_Medium+Long-haul+BEV_500
 MHDV+Bus+N/A+BEV_200, BEV Buses (all bus types)
 Transit_Rail, Electric Transit Rail 
 naics_311,Food Manufacturing
