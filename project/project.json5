@@ -53,6 +53,32 @@
                 ],
             },
         },
+        {
+            dataset_id: 'tempo_2023',
+            dataset_type: 'modeled',
+            version: '1.0.0',
+            required_dimensions: {
+                single_dimensional: {
+                    metric: {
+                        subset: [
+                            {
+                                name: 'End Uses by Sector',
+                                selectors: ['transportation_end_uses'],
+                            },
+                        ],
+                    },
+                    sector: {
+                        base: ["trans"],
+                    },
+                    subset: [
+                        {
+                            name: 'Subsectors by Sector',
+                            selectors: ['transportation_subsectors'],
+                        },
+                    ],
+                },
+            },
+        },
     ],
     dimensions: {
         base_dimensions: [
@@ -168,6 +194,32 @@
                         name: 'industrial_end_uses',
                         description: 'Industrial End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+                    },
+                ]
+            },
+            {
+                name: 'Subsectors by Sector',
+                display_name: 'subsectors_by_sector',
+                description: 'Selects subsectors by sector.',
+                type: 'metric',
+                file: 'dimensions/subset/subsectors_by_sector.csv',
+                create_supplemental_dimension: false,
+                selectors: [
+                    {
+                        name: 'residential_subsectors',
+                        description: 'Residential Subsectors',
+                    },
+                    {
+                        name: 'commercial_subsectors',
+                        description: 'Commercial Subsectors',
+                    },
+                    {
+                        name: 'transportation_subsectors',
+                        description: 'Transportation LDV Subsectors',
+                    },
+                    {
+                        name: 'industrial_subsectors',
+                        description: 'Industrial Subsectors',
                     },
                 ]
             }
