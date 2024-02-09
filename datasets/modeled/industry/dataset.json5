@@ -1,0 +1,118 @@
+{
+  dataset_id: "decarb_2023_industry",
+  dataset_type: "modeled",
+  sector_description: "industrial_manufacturing",
+  description: "Load shapes modeled for the manufacturing sector created using LBNL Industrial Load Shape Simulation Tool, national facility demand estimates from IGATE-E, and forecasts from GCAM.",
+  origin_creator: "Sarah Smith",
+  origin_organization: "LBL",
+  origin_contributors: [
+    "Samanvitha Murthy",
+    "Ikenna Okeke",
+    "Colin McMillian",
+  ],
+  origin_project: "DECARB Task 6 Year 1",
+  origin_date: "2024-02-06",
+  origin_version: "0.1.0",
+  source: "LBL SIELS (Simulator for Industrial Electricity Load Shapes)",
+  data_classification: "low",
+  tags: [
+    "industrial",
+  ],
+  trivial_dimensions: [
+    "sector",
+    "weather_year",
+  ],
+  data_schema: {
+    table_format: {
+      format_type: "pivoted",
+      pivoted_dimension_type: "metric",
+    },
+    data_schema_type: "one_table",
+  },
+
+  dimensions: [
+    {
+      type: "geography",
+      name: "State",
+      display_name: "State",
+      file: "dimensions/states.csv",
+      module: "dsgrid.dimension.standard",
+      class: "State",
+      description: "US States and DC",
+    },
+    {
+      type: "metric",
+      name: "Industry End Uses",
+      display_name: "Industry End Uses",
+      file: "dimensions/enduses.csv",
+      module: "dsgrid.dimension.standard",
+      class: "EnergyEndUse",
+      description: "MECS Industry End Uses",
+    },
+    {
+      type: "model_year", //copy this block (except the filepath) from project json file
+      name: "DECARB Model Years",
+      display_name: "DECARB 2023 Industry Model Years",
+      file: "../../../project/dimensions/model_years.csv",
+      module: "dsgrid.dimension.standard",
+      class: "ModelYear",
+      description: "Even years 2024-2030, then every 5 years through 2050.",
+    },
+    {
+      type: "scenario",
+      class: "Scenario",
+      name: "DECARB GCAM Scenarios",
+      display_name: "DECARB GCAM Scenarios",
+      description: "DECARB Task 4 Year 1 GCAM Scenarios",
+      file: "dimensions/scenarios.csv",
+      module: "dsgrid.dimension.standard",
+    },
+    {
+      type: "sector",
+      name: "Industrial Sector",
+      display_name: "Industrial Sector",
+      file: "dimensions/sectors.csv", // still need this dimension file - make sure it matches the project's sector format
+      module: "dsgrid.dimension.standard",
+      class: "Sector",
+      description: "Industrial Sector",
+    },
+    {
+      type: "subsector",
+      class: "Subsector",
+      name: "DECARB Year 1 Industrial Subsectors",
+      display_name: "Industrial Subsectors",
+      description: "Select subsectors modeled in other DECARB tasks and/or with meaningful decarbonization potential.",
+      file: "dimensions/subsectors.csv",
+      module: "dsgrid.dimension.standard",
+    },
+    {
+      type: "time", // question - status of time adjustment? next step? - Lexi will reach out
+      class: "Time",
+      frequency: "P0DT1H0M0.000000S", 
+      name: "Time-2018-EST-hourly",
+      display_name: "Time EST",
+      time_type: "datetime",
+      leap_day_adjustment: "none",
+      description: "Time dimension, 2018 hourly hour-of-year, period beginning, no Leap Day Adjustment",
+      time_interval_type: "period_ending",
+      str_format: "%Y-%m-%d %H:%M:%S",
+      timezone: "EasternStandard",
+      measurement_type: "total",
+      ranges: [
+        {
+          start: "2018-01-01 00:00:00",
+          end: "2018-12-31 23:00:00",
+        },
+      ],
+    },
+    {
+      type: "weather_year",
+      class: "WeatherYear",
+      name: "2018 Weather Year",
+      display_name: "Weather 2018",
+      description: "Weather year, 2018 only",
+      file: "../../../project/dimensions/weather_years.csv",
+      module: "dsgrid.dimension.standard",
+    },
+  ],
+}
