@@ -1,0 +1,28 @@
+{
+  mappings: [
+      {
+      description: "scenarios with variations on EV charging behavior to DECARB High default (immediate unmanaged)",
+      dimension_type: "scenario",
+      file: "dimension_mappings/scenario_to_scenario.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "TEMPO EVIX POLARIS subsectors to project sectors",
+      dimension_type: "subsector",
+      file: "dimension_mappings/subsector_to_subsector.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "county mapping to project counties",
+      dimension_type: "geography",
+      file: "dimension_mappings/county_to_county.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "TEMPO EVIX POLARIS model year to project model year",
+      dimension_type: "model_year",
+      file: "dimension_mappings/model_year_to_model_year.csv",
+      mapping_type: "many_to_many_explicit_multipliers",
+    },
+  ]
+}
