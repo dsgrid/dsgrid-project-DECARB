@@ -77,8 +77,82 @@ subsectors <- tibble(id = "bev")
 write_csv(subsectors, "c:/users/ayip/documents/github/dsgrid-project-DECARB/datasets/modeled/transport/dimensions/subsectors.csv")
 
 
+subsector <- tibble(id = c(
+    "Bus+N/A+BEV_200",
+    "Personal_LDV+Compact+BEV_200",
+    "Personal_LDV+Compact+BEV_300",
+    "Personal_LDV+Compact+BEV_400",
+    "Personal_LDV+Compact+PHEV_25",
+    "Personal_LDV+Compact+PHEV_50",
+    "Personal_LDV+Midsize+BEV_200",
+    "Personal_LDV+Midsize+BEV_300",
+    "Personal_LDV+Midsize+BEV_400",
+    "Personal_LDV+Midsize+PHEV_25",
+    "Personal_LDV+Midsize+PHEV_50",
+    "Personal_LDV+Pickup+BEV_200",
+    "Personal_LDV+Pickup+BEV_300",
+    "Personal_LDV+Pickup+BEV_400",
+    "Personal_LDV+Pickup+PHEV_25",
+    "Personal_LDV+Pickup+PHEV_50",
+    "Personal_LDV+SUV+BEV_200",
+    "Personal_LDV+SUV+BEV_300",
+    "Personal_LDV+SUV+BEV_400",
+    "Personal_LDV+SUV+PHEV_25",
+    "Personal_LDV+SUV+PHEV_50",
+    "Truck_Heavy+Local+BEV_150",
+    "Truck_Heavy+Local+BEV_300",
+    "Truck_Heavy+Long-haul+BEV_300",
+    "Truck_Heavy+Long-haul+BEV_500",
+    "Truck_Heavy+Regional+BEV_150",
+    "Truck_Heavy+Regional+BEV_300",
+    "Truck_Heavy_Vocational+Local+BEV_150",
+    "Truck_Heavy_Vocational+Local+BEV_300",
+    "Truck_Heavy_Vocational+Regional+BEV_150",
+    "Truck_Heavy_Vocational+Regional+BEV_300",
+    "Truck_Light+Local+BEV_150",
+    "Truck_Light+Local+BEV_300",
+    "Truck_Light+Long-haul+BEV_300",
+    "Truck_Light+Long-haul+BEV_500",
+    "Truck_Light+Regional+BEV_150",
+    "Truck_Light+Regional+BEV_300",
+    "Truck_Light_Vocational+Local+BEV_150",
+    "Truck_Light_Vocational+Local+BEV_300",
+    "Truck_Light_Vocational+Regional+BEV_150",
+    "Truck_Light_Vocational+Regional+BEV_300",
+    "Truck_Medium+Local+BEV_150",
+    "Truck_Medium+Local+BEV_300",
+    "Truck_Medium+Long-haul+BEV_300",
+    "Truck_Medium+Long-haul+BEV_500",
+    "Truck_Medium+Regional+BEV_150",
+    "Truck_Medium+Regional+BEV_300",
+    "Truck_Medium_Vocational+Local+BEV_150",
+    "Truck_Medium_Vocational+Local+BEV_300",
+    "Truck_Medium_Vocational+Regional+BEV_150",
+    "Truck_Medium_Vocational+Regional+BEV_300",
+    "Transit_Rail"
+  )) %>% mutate(name = id)
+
+write_csv(subsector, "c:/users/ayip/documents/github/dsgrid-project-DECARB/datasets/modeled/transport/dimensions/subsectors.csv")
+
+list_of_to_id =
+  c("bev_compact","bev_midsize","bev_pickup","bev_suv",
+    "phev_compact","phev_midsize","phev_pickup","phev_suv",
+    "bev_light_medium_truck","bev_medium_truck","bev_non_freight_truck","bev_heavy_truck",
+    "bev_bus","rail_transit")
+
+subsector_to_subsector <- subsector %>% rename(from_id = id) %>% select(-name) %>%
+  mutate(to_id = list_of_to_id[c(13,1,1,1,5,5,2,2,2,6,6,3,3,3,7,7,4,4,4,8,8,12,12,12,12,12,12,11,11,11,11,9,9,9,9,9,9,11,11,11,11,10,10,10,10,10,10,11,11,11,11,14)])
+
 subsector_to_subsector
 
 write_csv(subsector_to_subsector, "c:/users/ayip/documents/github/dsgrid-project-DECARB/datasets/modeled/transport/dimension_mappings/subsector_to_subsector.csv")
 
 
+# fix enduses
+project_enduses <- read_csv("C:/Users/ayip/Documents/GitHub/dsgrid-project-DECARB/project/dimensions/enduses.csv")
+evenduses_fixed <- project_enduses %>% filter(str_detect(id, "electricity_ev_")) %>% mutate(name = id %>% str_remove_all("electricity_"), fuel_id = "electricity", unit = "kWh")
+project_enduses %>% filter(!str_detect(id, "electricity_ev_")) %>% bind_rows(evenduses_fixed) %>%
+  write_csv("C:/Users/ayip/Documents/GitHub/dsgrid-project-DECARB/project/dimensions/enduses.csv")
+
+# dataset enduses
+project_enduses %>% filter(str_detect(id, "electricity_ev_")) %>% write_csv("c:/users/ayip/documents/github/dsgrid-project-DECARB/datasets/modeled/transport/dimensions/enduses.csv")
