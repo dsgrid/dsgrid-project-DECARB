@@ -13,7 +13,7 @@
       mapping_type: "one_to_one",
     },
     {
-      description: "county mapping to project counties - no data for 46102 Oglala Lakota SD, and removing AK/HI",
+      description: "county mapping to project counties - no data for 46102 Oglala Lakota SD (reflected in data with null time), and removing AK/HI",
       dimension_type: "geography",
       file: "dimension_mappings/county_to_county.csv",
       mapping_type: "one_to_one",
