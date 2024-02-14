@@ -8,8 +8,8 @@ phev_compact,,,,x
 phev_midsize,,,,x
 phev_pickup,,,,x
 phev_suv,,,,x
-bev_light_medium,,,,x
-bev_medium,,,,x
+bev_light_medium_truck,,,,x
+bev_medium_truck,,,,x
 bev_non_freight_truck,,,,x
 bev_heavy_truck,,,,x
 bev_bus,,,,x
