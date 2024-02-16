@@ -28,7 +28,7 @@
         },
         {
             dataset_id: 'decarb_2023_dgen',
-            wrap_time_allowed: True,
+            wrap_time_allowed: 'True',
             dataset_type: 'modeled',
             version: '1.0.0',
             required_dimensions: {
