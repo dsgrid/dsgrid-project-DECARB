@@ -1,20 +1,19 @@
 id,name
 unspecified,Unspecified
-bev_compact,BEV Compact
-bev_midsize,BEV Midsize
+bev_compact,BEV Compact Car
+bev_midsize,BEV Midsize Car
 bev_pickup,BEV Pickup
 bev_suv,BEV SUV
-phev_compact,PHEV Compact
-phev_midsize,PHEV Midsize
+phev_compact,PHEV Compact Car
+phev_midsize,PHEV Midsize Car
 phev_pickup,PHEV Pickup
 phev_suv,PHEV SUV
-bev_light_medium,BEV Light-Medium
-bev_medium,BEV Medium
-bev_non_freight_truck,BEV Non-freight truck
-bev_heavy,BEV Heavy
-bev_school_bus,BEV School Bus
-bev_transit_bus,BEV Transit Bus
-light_rail,Light Rail
+bev_light_medium_truck,BEV Light-Medium Freight Truck
+bev_medium_truck,BEV Medium Freight Truck
+bev_non_freight_truck,BEV Non-Freight Truck
+bev_heavy_truck,BEV Heavy Truck
+bev_bus,BEV Bus
+rail_transit,Electric Transit Rail
 naics_311,Food Manufacturing
 naics_312,Beverage and Tobacco Product Manufacturing
 naics_313,Textile Mills
