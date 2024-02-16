@@ -9,122 +9,26 @@
             version: '1.0.0',
             required_dimensions: {
                 single_dimensional: {
+                    sector: {
+                        base: ['res', 'com'],
+                    },
                     subsector: {
-                        base: [
-                            "unspecified",
-                        ],
+                        base: ['unspecified'],
                     },
-                },
-                multi_dimensional: [
-                    {
-                        sector: {
-                            base: [
-                                "com",
-                            ],
-                        },
-                        metric: {
-                            subset: [
-                                {
-                                    name: 'End Uses by Sector',
-                                    selectors: [
-                                        'commercial_end_uses',
-                                    ],
-                                },
-                            ],
-                        },
-                    },
-                    {
-                        sector: {
-                            base: [
-                                'res',
-                            ],
-                        },
-                        metric: {
-                            subset: [
-                                {
-                                    name: 'End Uses by Sector',
-                                    selectors: [
-                                        'residential_end_uses',
-                                    ],
-                                },
-                            ],
-                        },
-                    },
-                ],
-            },
-        },
-        {
-            dataset_id: 'decarb_2023_transport',
-            dataset_type: 'modeled',
-            version: '1.0.0',
-            required_dimensions: {
-                single_dimensional: {
                     metric: {
                         subset: [
                             {
                                 name: 'End Uses by Sector',
-                                selectors: ['transportation_end_uses'],
+                                selectors: ['residential_end_uses', 'commercial_end_uses'],
                             },
-                        ],
-                    },
-                    sector: {
-                        base: ["trans"],
-                    },
-                    subsector: {
-                        subset: [
-                            {
-                                name: 'Subsectors by Sector',
-                                selectors: ['transportation_subsectors'],
-                            },
-                        ],
-                    },
-                },
-                multi_dimensional: [
-                    {
-                        subsector: {
-                            base: [
-                                'bev_compact', 'bev_midsize', 'bev_pickup', 'bev_suv', 
-                                'phev_compact', 'phev_midsize', 'phev_pickup', 'phev_suv',
-                            ],
-                        },
-                        metric: {
-                            base: [
-                                'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
-                                'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
-                                'electricity_ev_ldv_public_l2', 'electricity_ev_ldv_public_dcfc',
-                                'electricity_ev_ldv_enroute_dcfc',
-                            ],
-                        },
-                    },
-                    {
-                        subsector: {
-                            base: [
-                                'bev_light_medium_truck', 'bev_medium_truck', 
-                                'bev_non_freight_truck', 'bev_heavy_truck', 
-                                'bev_bus',
-                            ],
-                        },
-                        metric: {
-                            base: [
-                                'electricity_ev_mhdv_depot_ac', 'electricity_ev_mhdv_depot_dc',
-                                'electricity_ev_mhdv_opportunity_dc',
-                                'electricity_ev_mhdv_enroute_dc',
-                            ],
-                        },
-                    },
-                    {
-                        subsector: {
-                            base: ['rail_transit'],
-                        },
-                        metric: {
-                            base: ['electricity_rail_transit'],
-                        },
-                    },
-                ],
-            },
+                        ]
+                    }
+                }
+            }
         },
         {
             dataset_id: 'decarb_2023_dgen',
+            wrap_time_allowed: True,
             dataset_type: 'modeled',
             version: '1.0.0',
             required_dimensions: {
@@ -257,32 +161,6 @@
                         name: 'industrial_end_uses',
                         description: 'Industrial End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
-                    },
-                ]
-            },
-            {
-                name: 'Subsectors by Sector',
-                display_name: 'subsectors_by_sector',
-                description: 'Selects subsectors by sector.',
-                type: 'subsector',
-                file: 'dimensions/subset/subsectors_by_sector.csv',
-                create_supplemental_dimension: false,
-                selectors: [
-                    {
-                        name: 'residential_subsectors',
-                        description: 'Residential Subsectors',
-                    },
-                    {
-                        name: 'commercial_subsectors',
-                        description: 'Commercial Subsectors',
-                    },
-                    {
-                        name: 'transportation_subsectors',
-                        description: 'Transportation LDV Subsectors',
-                    },
-                    {
-                        name: 'industrial_subsectors',
-                        description: 'Industrial Subsectors',
                     },
                 ]
             }

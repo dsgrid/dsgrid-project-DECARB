@@ -33,7 +33,11 @@
   ],
   use_project_geography_time_zone: true,
   data_schema: {
-    load_data_column_dimension: "metric",
+    table_format: {
+      format_type: "pivoted",
+      pivoted_dimension_type: "metric",
+    },
+    data_schema_type: "standard",
   },
   dimensions: [
     { 
