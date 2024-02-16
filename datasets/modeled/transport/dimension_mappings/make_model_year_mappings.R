@@ -23,11 +23,11 @@ frgt <- read_csv("C:/Users/ayip/Downloads/decarb2/freight_energy_decarb_0923_utf
 
 my_to_my <- tibble(from_id = c(2025,2025,2030,2025,2030,2030,2035,2040,2045,2050),
        to_id =   c(2024,2026,2026,2028,2028,2030,2035,2040,2045,2050),
-       fraction =c(decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2024]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2025],
-                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2026]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2025] * 0.5,
-                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2026]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2030] * 0.5,
-                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2028]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2025] * 0.5,
-                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2028]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2030] * 0.5,
+       from_fraction =c(decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2024]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2025],
+                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2026]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2025] * 0.8, #.5
+                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2026]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2030] * 0.2, #.5
+                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2028]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2025] * 0.4, #.5
+                   decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2028]/decarb2_high_ev_load$TWh[decarb2_high_ev_load$Year==2030] * 0.6, #.5
                    1,1,1,1,1))
 
 write_csv(my_to_my, "c:/users/ayip/documents/github/dsgrid-project-DECARB/datasets/modeled/transport/dimension_mappings/model_year_to_model_year.csv")
@@ -150,7 +150,7 @@ write_csv(subsector_to_subsector, "c:/users/ayip/documents/github/dsgrid-project
 
 # fix enduses
 project_enduses <- read_csv("C:/Users/ayip/Documents/GitHub/dsgrid-project-DECARB/project/dimensions/enduses.csv")
-evenduses_fixed <- project_enduses %>% filter(str_detect(id, "electricity_ev_")) %>% mutate(name = id %>% str_remove_all("electricity_"), fuel_id = "electricity", unit = "kWh")
+evenduses_fixed <- project_enduses %>% filter(str_detect(id, "electricity_ev_") | str_detect(id, "electricity_rail_")) %>% mutate(name = id %>% str_remove_all("electricity_"), fuel_id = "electricity", unit = "kWh")
 project_enduses %>% filter(!str_detect(id, "electricity_ev_")) %>% bind_rows(evenduses_fixed) %>%
   write_csv("C:/Users/ayip/Documents/GitHub/dsgrid-project-DECARB/project/dimensions/enduses.csv")
 
