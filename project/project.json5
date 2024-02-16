@@ -11,7 +11,7 @@
                 single_dimensional: {
                     subsector: {
                         base: [
-                            "unspecified",
+                            'unspecified',
                         ],
                     },
                 },
@@ -19,7 +19,7 @@
                     {
                         sector: {
                             base: [
-                                "com",
+                                'com',
                             ],
                         },
                         metric: {
@@ -54,7 +54,7 @@
             },
         },
         {
-            dataset_id: 'tempo_2023',
+            dataset_id: 'decarb_2023_transport',
             dataset_type: 'modeled',
             version: '1.0.0',
             required_dimensions: {
@@ -68,7 +68,7 @@
                         ],
                     },
                     sector: {
-                        base: ["trans"],
+                        base: ['trans'],
                     },
                     subsector: {
                         subset: [
@@ -79,6 +79,48 @@
                         ],
                     },
                 },
+                multi_dimensional: [
+                    {
+                        subsector: {
+                            base: [
+                                'bev_compact', 'bev_midsize', 'bev_pickup', 'bev_suv', 
+                                'phev_compact', 'phev_midsize', 'phev_pickup', 'phev_suv',
+                            ],
+                        },
+                        metric: {
+                            base: [
+                                'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
+                                'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
+                                'electricity_ev_ldv_public_l2', 'electricity_ev_ldv_public_dcfc',
+                                'electricity_ev_ldv_enroute_dcfc',
+                            ],
+                        },
+                    },
+                    {
+                        subsector: {
+                            base: [
+                                'bev_light_medium_truck', 'bev_medium_truck', 
+                                'bev_non_freight_truck', 'bev_heavy_truck', 
+                                'bev_bus',
+                            ],
+                        },
+                        metric: {
+                            base: [
+                                'electricity_ev_mhdv_depot_ac', 'electricity_ev_mhdv_depot_dc',
+                                'electricity_ev_mhdv_opportunity_dc',
+                                'electricity_ev_mhdv_enroute_dc',
+                            ],
+                        },
+                    },
+                    {
+                        subsector: {
+                            base: ['rail_transit'],
+                        },
+                        metric: {
+                            base: ['electricity_rail_transit'],
+                        },
+                    },
+                ],
             },
         },
     ],
