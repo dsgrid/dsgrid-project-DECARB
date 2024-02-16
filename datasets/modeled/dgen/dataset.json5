@@ -25,7 +25,6 @@
     "Standard Scenarios 2023",
     "decarb",
   ],
-  data_schema_type: "standard",
   trivial_dimensions: [
     "weather_year",
     "scenario",
