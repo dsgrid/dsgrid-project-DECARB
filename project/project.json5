@@ -166,6 +166,20 @@
             }
         ],
         supplemental_dimensions: [
+             {
+                class: 'State',
+                description: 'US States L48',
+                file: 'dimensions/supplemental/states.csv',
+                module: 'dsgrid.dimension.standard',
+                name: 'US States L48',
+                display_name: 'State',
+                type: 'geography',
+                mapping: {
+                    description: 'Maps US Counties 2020 L48 to State',
+                    file: 'dimension_mappings/lookup_county_to_state.csv',
+                    mapping_type: 'many_to_one_aggregation',
+               },
+            },
             {
                 // For ReEDS modeling
                 type: 'geography',
