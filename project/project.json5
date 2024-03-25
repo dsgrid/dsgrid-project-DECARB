@@ -59,24 +59,8 @@
             version: '1.0.0',
             required_dimensions: {
                 single_dimensional: {
-                    metric: {
-                        subset: [
-                            {
-                                name: 'End Uses by Sector',
-                                selectors: ['transportation_end_uses'],
-                            },
-                        ],
-                    },
                     sector: {
                         base: ["trans"],
-                    },
-                    subsector: {
-                        subset: [
-                            {
-                                name: 'Subsectors by Sector',
-                                selectors: ['transportation_subsectors'],
-                            },
-                        ],
                     },
                 },
                 multi_dimensional: [
