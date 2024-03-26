@@ -66,35 +66,35 @@ id,name,state
 01129,Washington,AL
 01131,Wilcox,AL
 01133,Winston,AL
-02020,NA,NA
-02050,NA,NA
-02060,NA,NA
-02068,NA,NA
-02070,NA,NA
-02090,NA,NA
-02110,NA,NA
-02122,NA,NA
-02130,NA,NA
-02150,NA,NA
-02164,NA,NA
-02170,NA,NA
-02180,NA,NA
-02185,NA,NA
-02188,NA,NA
-02220,NA,NA
-02240,NA,NA
-02261,NA,NA
-02198,NA,NA
-02275,NA,NA
-02195,NA,NA
-02013,NA,NA
-02282,NA,NA
-02100,NA,NA
-02016,NA,NA
-02290,NA,NA
-02158,NA,NA
-02230,NA,NA
-02105,NA,NA
+02013,Aleutians East Borough,AK
+02016,Aleutians West Census Area,AK
+02020,Anchorage Municipality,AK
+02050,Bethel Census Area,AK
+02060,Bristol Bay Borough,AK
+02068,Denali Borough,AK
+02070,Dillingham Census Area,AK
+02090,Fairbanks North Star Borough,AK
+02100,Haines Borough,AK
+02105,Hoonah-Angoon Census Area,AK
+02110,Juneau City and Borough,AK
+02122,Kenai Peninsula Borough,AK
+02130,Ketchikan Gateway Borough,AK
+02150,Kodiak Island Borough,AK
+02158,Kusilvak Census Area,AK
+02164,Lake and Peninsula Borough,AK
+02170,Matanuska-Susitna Borough,AK
+02180,Nome Census Area,AK
+02185,North Slope Borough,AK
+02188,Northwest Arctic Borough,AK
+02195,Petersburg Census Area,AK
+02198,Prince of Wales-Hyder Census Area,AK
+02220,Sitka City and Borough,AK
+02230,Skagway Municipality,AK
+02240,Southeast Fairbanks Census Area,AK
+02261,Valdez-Cordova Census Area,AK
+02275,Wrangell City and Borough,AK
+02282,Yakutat City and Borough,AK
+02290,Yukon-Koyukuk Census Area,AK
 04001,Apache,AZ
 04003,Cochise,AZ
 04005,Coconino,AZ
