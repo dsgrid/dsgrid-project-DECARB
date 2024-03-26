@@ -79,6 +79,9 @@
                                 'electricity_ev_ldv_enroute_dcfc',
                             ],
                         },
+                        geography: {
+                            base: ['__all__'],
+                        }
                     },
                     {
                         subsector: {
@@ -95,6 +98,9 @@
                                 'electricity_ev_mhdv_enroute_dc',
                             ],
                         },
+                        geography: {
+                            base: ['__all__'],
+                        }
                     },
                     {
                         subsector: {
