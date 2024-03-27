@@ -24,5 +24,11 @@
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "duplication",
     },
+    {
+      description: "2010-2024",
+      dimension_type: "model_year",
+      file: "dimension_mappings/model_year_to_model_year.csv",
+      mapping_type: "one_to_one",
+    },
   ],
 }
