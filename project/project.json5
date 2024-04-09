@@ -74,7 +74,7 @@
                         metric: {
                             base: [
                                 'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
-                                'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
+                                'electricity_ev_ldv_work_l1', 'electricity_ev_ldv_work_l2',
                                 'electricity_ev_ldv_public_l2', 'electricity_ev_ldv_public_dcfc',
                                 'electricity_ev_ldv_enroute_dcfc',
                             ],
