@@ -54,7 +54,7 @@
             },
         },
         {
-            dataset_id: 'decarb_2023_residuals',
+            dataset_id: 'decarb_2023_res_and_com_residuals',
             dataset_type: 'modeled',
             version: '1.0.0',
             required_dimensions: {
