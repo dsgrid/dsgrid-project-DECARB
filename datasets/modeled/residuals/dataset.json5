@@ -12,13 +12,14 @@
   ],
   origin_project: "DECARB",
   origin_date: "2024-04-04",
-  origin_version: "v0.0.1",
+  origin_version: "v0.1.0",
   data_source: "EIA, NREL, Scout, dGen",
   source: "Residual calculation for DECARB 2023",
   data_classification: "low",
   tags: [
     "residential",
     "commercial",
+    residual
   ],
   trivial_dimensions: [
     "scenario",
