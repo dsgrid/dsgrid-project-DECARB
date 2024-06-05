@@ -86,22 +86,21 @@
       module: "dsgrid.dimension.standard",
     },
     {
-      type: "time", // question - status of time adjustment? next step? - Lexi will reach out
+      type: "time",
       class: "Time",
-      frequency: "P0DT1H0M0.000000S", 
-      name: "Time-2018-EST-hourly",
-      display_name: "Time EST",
-      time_type: "datetime",
-      leap_day_adjustment: "none",
-      description: "Time dimension, 2018 hourly hour-of-year, period beginning, no Leap Day Adjustment",
-      time_interval_type: "period_ending",
+      time_type: "index",
+      name: "Industrial-time",
+      display_name: "IndTime",
+      description: "Industrial time, index, stitched from representative diurnal profiles in county local clock time that is laid out like standard time. Both the data and timestamps need daylight saving adjustment to local prevailing time.",
+      time_interval_type: "period_ending", // verify
       str_format: "%Y-%m-%d %H:%M:%S",
-      timezone: "EasternStandard",
+      starting_timestamps: ["2018-01-01 00:00:00"], // verify
+      frequency: "P0DT1H0M0.000000S", 
       measurement_type: "total",
       ranges: [
         {
-          start: "2018-01-01 00:00:00",
-          end: "2018-12-31 23:00:00",
+          start: 0,
+          end: 8759,
         },
       ],
     },
