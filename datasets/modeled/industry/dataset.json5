@@ -50,7 +50,7 @@
       description: "MECS Industry End Uses",
     },
     {
-      type: "model_year", //copy this block (except the filepath) from project json file
+      type: "model_year",
       name: "DECARB Model Years",
       display_name: "DECARB 2023 Industry Model Years",
       file: "../../../project/dimensions/model_years.csv",
@@ -64,14 +64,14 @@
       name: "DECARB GCAM Scenarios",
       display_name: "DECARB GCAM Scenarios",
       description: "DECARB Task 4 Year 1 GCAM Scenarios",
-      file: "dimensions/scenarios.csv",
+      file: "dimensions/gcam_scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "sector",
       name: "Industrial Sector",
       display_name: "Industrial Sector",
-      file: "dimensions/sectors.csv", // still need this dimension file - make sure it matches the project's sector format
+      file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
       description: "Industrial Sector",
