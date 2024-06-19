@@ -1,6 +1,7 @@
 {
   dataset_id: "decarb_2023_industry",
   dataset_type: "modeled",
+  data_source: "ILSST_IGATE-E_GCAM",
   sector_description: "industrial_manufacturing",
   description: "Load shapes modeled for the manufacturing sector created using LBNL Industrial Load Shape Simulation Tool, national facility demand estimates from IGATE-E, and forecasts from GCAM.",
   origin_creator: "Sarah Smith",
