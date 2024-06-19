@@ -1,52 +1,52 @@
-﻿id,name,time_zone,secondary_time_zone
-AL,Alabama,CentralPrevailing,None
-AK,Alaska,AlaskaPrevailing,None
-AZ,Arizona,MountainStandard,MountainPrevailing
-AR,Arkansas,CentralPrevailing,None
-CA,California,PacificPrevailing,None
-CO,Colorado,MountainPrevailing,None
-CT,Connecticut,EasternPrevailing,None
-DE,Delaware,EasternPrevailing,None
-DC,District Of Columbia,EasternPrevailing,None
-FL,Florida,EasternPrevailing,CentralPrevailing
-GA,Georgia,EasternPrevailing,None
-HI,Hawaii,HawaiiAleutianStandard,None
-ID,Idaho,MountainPrevailing,PacificPrevailing
-IL,Illinois,CentralPrevailing,None
-IN,Indiana,EasternPrevailing,CentralPrevailing
-IA,Iowa,CentralPrevailing,None
-KS,Kansas,CentralPrevailing,MountainPrevailing
-KY,Kentucky,EasternPrevailing,CentralPrevailing
-LA,Louisiana,CentralPrevailing,None
-ME,Maine,EasternPrevailing,None
-MD,Maryland,EasternPrevailing,None
-MA,Massachusetts,EasternPrevailing,None
-MI,Michigan,EasternPrevailing,CentralPrevailing
-MN,Minnesota,CentralPrevailing,None
-MS,Mississippi,CentralPrevailing,None
-MO,Missouri,CentralPrevailing,None
-MT,Montana,MountainPrevailing,None
-NE,Nebraska,CentralPrevailing,MountainPrevailing
-NV,Nevada,PacificPrevailing,None
-NH,New Hampshire,EasternPrevailing,None
-NJ,New Jersey,EasternPrevailing,None
-NM,New Mexico,MountainPrevailing,None
-NY,New York,EasternPrevailing,None
-NC,North Carolina,EasternPrevailing,None
-ND,North Dakota,CentralPrevailing,MountainPrevailing
-OH,Ohio,EasternPrevailing,None
-OK,Oklahoma,CentralPrevailing,None
-OR,Oregon,PacificPrevailing,MountainPrevailing
-PA,Pennsylvania,EasternPrevailing,None
-RI,Rhode Island,EasternPrevailing,None
-SC,South Carolina,EasternPrevailing,None
-SD,South Dakota,CentralPrevailing,MountainPrevailing
-TN,Tennessee,CentralPrevailing,None
-TX,Texas,CentralPrevailing,None
-UT,Utah,MountainPrevailing,None
-VT,Vermont,EasternPrevailing,EasternPrevailing
-VA,Virginia,EasternPrevailing,MountainPrevailing
-WA,Washington,PacificPrevailing,None
-WV,West Virginia,EasternPrevailing,None
-WI,Wisconsin,CentralPrevailing,None
-WY,Wyoming,MountainPrevailing,None
+﻿id,name,time_zone
+AL,Alabama,CentralPrevailing
+AK,Alaska,AlaskaPrevailing
+AZ,Arizona,MountainStandard
+AR,Arkansas,CentralPrevailing
+CA,California,PacificPrevailing
+CO,Colorado,MountainPrevailing
+CT,Connecticut,EasternPrevailing
+DE,Delaware,EasternPrevailing
+DC,District Of Columbia,EasternPrevailing
+FL,Florida,EasternPrevailing
+GA,Georgia,EasternPrevailing
+HI,Hawaii,HawaiiAleutianStandard
+ID,Idaho,MountainPrevailing
+IL,Illinois,CentralPrevailing
+IN,Indiana,EasternPrevailing
+IA,Iowa,CentralPrevailing
+KS,Kansas,CentralPrevailing
+KY,Kentucky,EasternPrevailing
+LA,Louisiana,CentralPrevailing
+ME,Maine,EasternPrevailing
+MD,Maryland,EasternPrevailing
+MA,Massachusetts,EasternPrevailing
+MI,Michigan,EasternPrevailing
+MN,Minnesota,CentralPrevailing
+MS,Mississippi,CentralPrevailing
+MO,Missouri,CentralPrevailing
+MT,Montana,MountainPrevailing
+NE,Nebraska,CentralPrevailing
+NV,Nevada,PacificPrevailing
+NH,New Hampshire,EasternPrevailing
+NJ,New Jersey,EasternPrevailing
+NM,New Mexico,MountainPrevailing
+NY,New York,EasternPrevailing
+NC,North Carolina,EasternPrevailing
+ND,North Dakota,CentralPrevailing
+OH,Ohio,EasternPrevailing
+OK,Oklahoma,CentralPrevailing
+OR,Oregon,PacificPrevailing
+PA,Pennsylvania,EasternPrevailing
+RI,Rhode Island,EasternPrevailing
+SC,South Carolina,EasternPrevailing
+SD,South Dakota,CentralPrevailing
+TN,Tennessee,CentralPrevailing
+TX,Texas,CentralPrevailing
+UT,Utah,MountainPrevailing
+VT,Vermont,EasternPrevailing
+VA,Virginia,EasternPrevailing
+WA,Washington,PacificPrevailing
+WV,West Virginia,EasternPrevailing
+WI,Wisconsin,CentralPrevailing
+WY,Wyoming,MountainPrevailing
