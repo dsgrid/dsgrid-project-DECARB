@@ -17,6 +17,7 @@
       dimension_type: "geography",
       file: "dimension_mappings/state_to_county_industrial.csv",
       mapping_type: "one_to_many_disaggregation",
+      from_fraction_tolerance: 1e-5,
     },
   ],
 }
