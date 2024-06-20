@@ -7,6 +7,12 @@
       mapping_type: "one_to_one",
     },
     {
+      description: "Industrial dataset end uses to Decarb industrial end uses",
+      dimension_type: "metric",
+      file: "dimension_mappings/enduses_to_enduses_industrial.csv",
+      mapping_type: "one_to_one",
+    },
+    {
       description: "Conus states + DC to conus county for Decarb industrial dataset",
       dimension_type: "geography",
       file: "dimension_mappings/state_to_county_industrial.csv",

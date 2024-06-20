@@ -33,7 +33,6 @@ electricity_other_process,,,,x
 electricity_facility_hvac,,,,x
 electricity_facility_lighting,,,,x
 electricity_other_facility_support,,,,x
-electricity_onsite_transportation,,,,x
 electricity_other_nonprocess,,,,x
 electricity_chp,,,,
 electricity_thermal_dg,,,,
