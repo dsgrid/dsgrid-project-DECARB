@@ -1,52 +1,52 @@
-﻿id,name,time_zone
-AL,Alabama,CentralPrevailing
-AK,Alaska,AlaskaPrevailing
-AZ,Arizona,MountainStandard
-AR,Arkansas,CentralPrevailing
-CA,California,PacificPrevailing
-CO,Colorado,MountainPrevailing
-CT,Connecticut,EasternPrevailing
-DE,Delaware,EasternPrevailing
-DC,District Of Columbia,EasternPrevailing
-FL,Florida,EasternPrevailing
-GA,Georgia,EasternPrevailing
-HI,Hawaii,HawaiiAleutianStandard
-ID,Idaho,MountainPrevailing
-IL,Illinois,CentralPrevailing
-IN,Indiana,EasternPrevailing
-IA,Iowa,CentralPrevailing
-KS,Kansas,CentralPrevailing
-KY,Kentucky,EasternPrevailing
-LA,Louisiana,CentralPrevailing
-ME,Maine,EasternPrevailing
-MD,Maryland,EasternPrevailing
-MA,Massachusetts,EasternPrevailing
-MI,Michigan,EasternPrevailing
-MN,Minnesota,CentralPrevailing
-MS,Mississippi,CentralPrevailing
-MO,Missouri,CentralPrevailing
-MT,Montana,MountainPrevailing
-NE,Nebraska,CentralPrevailing
-NV,Nevada,PacificPrevailing
-NH,New Hampshire,EasternPrevailing
-NJ,New Jersey,EasternPrevailing
-NM,New Mexico,MountainPrevailing
-NY,New York,EasternPrevailing
-NC,North Carolina,EasternPrevailing
-ND,North Dakota,CentralPrevailing
-OH,Ohio,EasternPrevailing
-OK,Oklahoma,CentralPrevailing
-OR,Oregon,PacificPrevailing
-PA,Pennsylvania,EasternPrevailing
-RI,Rhode Island,EasternPrevailing
-SC,South Carolina,EasternPrevailing
-SD,South Dakota,CentralPrevailing
-TN,Tennessee,CentralPrevailing
-TX,Texas,CentralPrevailing
-UT,Utah,MountainPrevailing
-VT,Vermont,EasternPrevailing
-VA,Virginia,EasternPrevailing
-WA,Washington,PacificPrevailing
-WV,West Virginia,EasternPrevailing
-WI,Wisconsin,CentralPrevailing
-WY,Wyoming,MountainPrevailing
+﻿id,name
+AL,Alabama
+AK,Alaska
+AZ,Arizona
+AR,Arkansas
+CA,California
+CO,Colorado
+CT,Connecticut
+DE,Delaware
+DC,District Of Columbia
+FL,Florida
+GA,Georgia
+HI,Hawaii
+ID,Idaho
+IL,Illinois
+IN,Indiana
+IA,Iowa
+KS,Kansas
+KY,Kentucky
+LA,Louisiana
+ME,Maine
+MD,Maryland
+MA,Massachusetts
+MI,Michigan
+MN,Minnesota
+MS,Mississippi
+MO,Missouri
+MT,Montana
+NE,Nebraska
+NV,Nevada
+NH,New Hampshire
+NJ,New Jersey
+NM,New Mexico
+NY,New York
+NC,North Carolina
+ND,North Dakota
+OH,Ohio
+OK,Oklahoma
+OR,Oregon
+PA,Pennsylvania
+RI,Rhode Island
+SC,South Carolina
+SD,South Dakota
+TN,Tennessee
+TX,Texas
+UT,Utah
+VT,Vermont
+VA,Virginia
+WA,Washington
+WV,West Virginia
+WI,Wisconsin
+WY,Wyoming

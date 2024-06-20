@@ -1,0 +1,16 @@
+{
+  mappings: [
+    {
+      description: "GCam scenarios to Decarb scenarios",
+      dimension_type: "scenario",
+      file: "dimension_mappings/scenario_to_scenario.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "Conus states + DC to conus county for Decarb industrial dataset",
+      dimension_type: "geography",
+      file: "dimension_mappings/state_to_county_industrial.csv",
+      mapping_type: "one_to_many_disaggregation",
+    },
+  ],
+}
