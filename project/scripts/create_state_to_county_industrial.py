@@ -14,7 +14,7 @@ def main():
     df = df.rename(columns=col_rename)[col_rename.values()]
 
     df["from_fraction"] = 1
-    df["from_fraction"] = df.set_index("from_id")["from_fraction"].div(df.groupby("from_id")["from_fraction"].sum()).round(6).values
+    df["from_fraction"] = df.set_index("from_id")["from_fraction"].div(df.groupby("from_id")["from_fraction"].sum()).round(9).values
 
     # Check
     df_state = pd.read_csv(state_file)
