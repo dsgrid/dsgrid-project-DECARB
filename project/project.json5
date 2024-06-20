@@ -61,7 +61,7 @@
                 single_dimensional: {
                     sector: {
                         base: [
-                            "ind",
+                            'ind',
                         ],
                     },
                     subsector: {
