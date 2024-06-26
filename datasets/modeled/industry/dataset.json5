@@ -30,7 +30,7 @@
     },
     data_schema_type: "one_table",
   },
-  use_project_geography_time_zone: true,
+  use_project_geography_time_zone: True
   dimensions: [
     {
       type: "geography",
@@ -51,13 +51,13 @@
       description: "MECS Industry End Uses",
     },
     {
-      type: "model_year",
-      name: "DECARB Model Years",
-      display_name: "DECARB 2023 Industry Model Years",
+      type: 'model_year',
+      class: 'ModelYear',
+      name: 'DECARB 2023 Model Years',
+      display_name: 'Model Year',
+      description: 'DECARB 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
       file: "../../../project/dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
-      class: "ModelYear",
-      description: "Even years 2024-2030, then every 5 years through 2050.",
     },
     {
       type: "scenario",
