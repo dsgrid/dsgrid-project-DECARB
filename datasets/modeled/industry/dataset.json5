@@ -14,7 +14,7 @@
   origin_project: "DECARB Year 1 Task 6",
   origin_date: "2024-02-06",
   origin_version: "0.1.0",
-  source: "LBL SIELS (Simulator for Industrial Electricity Load Shapes)",
+  source: "LBNL, ORNL, NREL",
   data_classification: "low",
   tags: [
     "industrial",
@@ -92,7 +92,7 @@
       time_type: "index",
       name: "Industrial-time",
       display_name: "IndTime",
-      description: "Industrial 8760-indexed time stitched from representative diurnal profiles in local clock time. The data are laid out like standard time and have days of the week aligned with what's expected for weather year 2018, but both the data and timestamps need daylight saving adjustment to local prevailing time.",
+      description: "Industrial 8760-indexed time with 2018-01-01 00:00:00 start, stitched from representative diurnal profiles in local clock time. The data are laid out like standard time and have days of the week aligned with what's expected for weather year 2018, but both the data and timestamps need daylight saving adjustment to local prevailing time.",
       time_interval_type: "period_beginning",
       str_format: "%Y-%m-%d %H:%M:%S",
       starting_timestamps: ["2018-01-01 00:00:00"],
