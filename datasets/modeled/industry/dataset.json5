@@ -64,7 +64,7 @@
       class: "Scenario",
       name: "DECARB GCAM Scenarios",
       display_name: "DECARB GCAM Scenarios",
-      description: "DECARB Task 4 Year 1 GCAM Scenarios",
+      description: "DECARB Year 1 Task 4 GCAM Scenarios",
       file: "dimensions/gcam_scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
