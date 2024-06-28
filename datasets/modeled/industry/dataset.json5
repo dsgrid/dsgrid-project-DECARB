@@ -92,7 +92,7 @@
       time_type: "index",
       name: "Industrial-time",
       display_name: "IndTime",
-      description: "Industrial time, index, stitched from representative diurnal profiles in county local clock time that is laid out like standard time. Both the data and timestamps need daylight saving adjustment to local prevailing time.",
+      description: "Industrial 8760-indexed time stitched from representative diurnal profiles in local clock time. The data are laid out like standard time and have days of the week aligned with what's expected for weather year 2018, but both the data and timestamps need daylight saving adjustment to local prevailing time.",
       time_interval_type: "period_beginning",
       str_format: "%Y-%m-%d %H:%M:%S",
       starting_timestamps: ["2018-01-01 00:00:00"],
