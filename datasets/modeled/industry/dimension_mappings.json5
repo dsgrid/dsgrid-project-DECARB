@@ -1,7 +1,7 @@
 {
   mappings: [
     {
-      description: "GCam scenarios to Decarb scenarios",
+      description: "GCAM scenarios to DECARB scenarios",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
