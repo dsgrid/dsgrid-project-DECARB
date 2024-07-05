@@ -14,24 +14,11 @@ bev_non_freight_truck,BEV Non-Freight Truck
 bev_heavy_truck,BEV Heavy Truck
 bev_bus,BEV Bus
 rail_transit,Electric Transit Rail
-naics_311,Food Manufacturing
-naics_312,Beverage and Tobacco Product Manufacturing
-naics_313,Textile Mills
-naics_314,Textile Product Mills
-naics_315,Apparel Manufacturing
-naics_316,Leather and Allied Product Manufacturing
-naics_321,Wood Product Manufacturing
-naics_322,Paper Manufacturing
-naics_323,Printing and Related Support Activities
-naics_324,Petroleum and Coal Products Manufacturing
-naics_325,Chemical Manufacturing
-naics_326,Plastics and Rubber Products Manufacturing
-naics_327,Nonmetallic Mineral Product Manufacturing
-naics_331,Primary Metal Manufacturing
-naics_332,Fabricated Metal Product Manufacturing
-naics_333,Machinery Manufacturing
-naics_334,Computer and Electronic Product Manufacturing
-naics_335,"Electrical Equipment, Appliance, and Component Manufacturing"
-naics_336,Transportation Equipment Manufacturing
-naics_337,Furniture and Related Product Manufacturing
-naics_339,Miscellaneous Manufacturing
+naics_3273,Cement and Concrete
+naics_3253,Pesticides and Fertilizer
+naics_3311,Iron and Steel
+naics_311_312,Food and Beverage
+naics_325_other,Chemicals
+naics_3241,Petroleum Refineries
+naics_322,Pulp and Paper
+naics_3_other,Other Manufacturing
