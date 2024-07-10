@@ -40,7 +40,7 @@
   },
   dimensions: [
     { 
-     "class": "County",
+     "class": "GeographyDimensionBaseModel",
       type: "geography",
       name: 'US Census tracts',
       display_name: "Census tracts",
@@ -62,8 +62,8 @@
         description: 'subsectors are not specified',
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
-        name: 'unspecified subsectors',
-        display_name: 'unspecified subsectors',
+        name: 'tilt azimuth subsectors',
+        display_name: 'tilt azimuth subsectors',
         type: 'subsector',
       },
     {

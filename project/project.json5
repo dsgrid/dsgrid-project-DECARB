@@ -161,7 +161,7 @@
                         base: ['res', 'com'],
                     },
                     subsector: {
-                        base: ['unspecified'],
+                        base: ['__all__'],
                     },
                     metric: {
                         base: ['electricity_dpv']
@@ -218,7 +218,7 @@
             required_dimensions: {
             single_dimensional: {
             model_year: {
-            base: ["2023", "2030", "2050"],
+            base: ['__all__'],
           },
           subsector: {
             base: ['unspecified'],
@@ -239,9 +239,7 @@
           required_dimensions: {
           single_dimensional: {
           model_year: {
-            base: [
-               "2024"
-            ],
+            base: ["2024"],
           },
           subsector: {
             base: ['unspecified'],
