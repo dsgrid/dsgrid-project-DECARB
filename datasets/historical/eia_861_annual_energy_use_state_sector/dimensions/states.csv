@@ -6,7 +6,7 @@ AZ,Arizona
 CA,California
 CO,Colorado
 CT,Connecticut
-DC,District
+DC,District of Columbia
 DE,Delaware
 FL,Florida
 GA,Georgia
@@ -26,21 +26,21 @@ MN,Minnesota
 MO,Missouri
 MS,Mississippi
 MT,Montana
-NC,North
-ND,North
+NC,North Carolina
+ND,North Dakota
 NE,Nebraska
-NH,New
-NJ,New
-NM,New
+NH,New Hampshire
+NJ,New Jersey
+NM,New Mexico
 NV,Nevada
-NY,New
+NY,New York
 OH,Ohio
 OK,Oklahoma
 OR,Oregon
 PA,Pennsylvania
-RI,Rhode
-SC,South
-SD,South
+RI,Rhode Island
+SC,South Carolina
+SD,South Dakota
 TN,Tennessee
 TX,Texas
 UT,Utah
@@ -48,5 +48,5 @@ VA,Virginia
 VT,Vermont
 WA,Washington
 WI,Wisconsin
-WV,West
+WV,West Virginia
 WY,Wyoming

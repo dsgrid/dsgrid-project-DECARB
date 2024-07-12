@@ -1,8 +1,8 @@
 {
   dataset_id: "decarb_2023_datacenters",
   dataset_type: "modeled",
-  sector_description: "Residential and commercial",
-  description: "Datacenter load for the contiguous US for DECARB 2023 High Scenario, calculated using the EPRI 2024 whitepaper Analyzing Artificial Intelligence and Data Center Energy Consumption",
+  sector_description: "Commercial",
+  description: "Data center load for the DECARB 2023 High Scenario, with the projection based in part on EPRI (2024), 'Analyzing Artificial Intelligence and Data Center Energy Consumption'",
   origin_creator: "Ashreeta Prasanna",
   origin_organization: "NREL",
   origin_contributors: [
@@ -17,7 +17,8 @@
   source: "Datacenter load for DECARB 2023",
   data_classification: "low",
   tags: [
-    "datacenters"
+    "datacenters",
+    "data center"
   ],
   trivial_dimensions: [
     "scenario",
@@ -44,9 +45,9 @@
     },
     {
       type: "metric",
-      name: "Datacenters",
-      display_name: "Datacenters",
-      file: "dimensions/enduses.csv",
+      name: "Unspecified Electricity",
+      display_name: "Unspecified Electricity",
+      file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
       description: "Unspecified end use electricity",
@@ -58,7 +59,7 @@
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
-      description: "Current data for the year 2023 and future snapshot years 2030 and 2050",
+      description: "Projections of annual data center load 2023 through 2050",
     },
     {
       type: "scenario",
@@ -71,12 +72,12 @@
     },
     {
       type: "sector",
-      name: "Industrial Sector",
-      display_name: "Industrial Sector",
-      file: "../../../datasets/modeled/industry/dimensions/sectors.csv",
+      name: "Commercial Sector",
+      display_name: "Commercial Sector",
+      file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
-      description: "Industrial Sector",
+      description: "Commercial Sector",
     },
     {
       type: "subsector",

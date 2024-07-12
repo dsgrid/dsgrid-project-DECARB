@@ -14,8 +14,8 @@
   origin_project: "DECARB",
   origin_date: "2024-07-09",
   origin_version: "v0.1.0",
-  data_source: "EIA, NREL, IGATE-E",
-  source: "Industrial residual calculation for DECARB 2023",
+  data_source: "EIA, ILSST_IGATE-E_GCAM",
+  source: "NREL",
   data_classification: "low",
   tags: [
     "industrial",
@@ -46,9 +46,9 @@
     },
     {
       type: "metric",
-      name: "Industrial Residual",
-      display_name: "Industrial residual",
-      file: "dimensions/enduses.csv",
+      name: "Unspecified Electricity",
+      display_name: "Unspecified Electricity",
+      file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
       description: "Unspecified end use electricity",

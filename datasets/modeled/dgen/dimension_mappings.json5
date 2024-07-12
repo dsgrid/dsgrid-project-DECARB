@@ -7,7 +7,13 @@
       mapping_type: "many_to_one_aggregation",
     },
     {
-      description: "dGen scenario dataset-to-project dimension mapping for the DECARB project",
+      description: "dGen subsectors to unspecified project subsector",
+      dimension_type: "subsector",
+      file: "dimension_mappings/subsector_to_subsector.csv",
+      mapping_type: "many_to_one_aggregation",
+    },
+    {
+      description: "dGen scenario to DECARB scenario",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",

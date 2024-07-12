@@ -14,7 +14,7 @@
   origin_date: "2024-04-04",
   origin_version: "v0.1.0",
   data_source: "EIA, NREL, Scout, dGen",
-  source: "Residual calculation for DECARB 2023",
+  source: "NREL",
   data_classification: "low",
   tags: [
     "residential",
@@ -23,8 +23,8 @@
   ],
   trivial_dimensions: [
     "scenario",
-    "subsector",
     "weather_year",
+    "subsector"
   ],
   data_schema: {
     table_format: {
@@ -46,9 +46,9 @@
     },
     {
       type: "metric",
-      name: "Residential and Commercial Residuals",
-      display_name: "Res and com residuals",
-      file: "dimensions/enduses.csv",
+      name: "Unspecified Electricity",
+      display_name: "Unspecified Electricity",
+      file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
       description: "Unspecified end use electricity",

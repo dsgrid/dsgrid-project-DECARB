@@ -161,7 +161,7 @@
                         base: ['res', 'com'],
                     },
                     subsector: {
-                        base: ["15_S", "25_S", "35_E", "25_SE", "25_W", "35_S", "15_SE", "25_SW", "45_E", "45_SE", "35_W", "35_SE", "15_E", "45_W", "25_E", "45_S", "15_SW", "55_S", "35_SW", "55_SE", "45_SW", "55_SW", "15_W", "55_E"],
+                        base: ['unspecified'],
                     },
                     metric: {
                         base: ['electricity_dpv']
@@ -196,9 +196,6 @@
             version: '1.0.0',
             required_dimensions: {
             single_dimensional: {
-            model_year: {
-            base: ["2024", "2030", "2050"],
-          },
           subsector: {
             base: ['unspecified'],
           },
@@ -217,17 +214,14 @@
             version: '1.0.0',
             required_dimensions: {
             single_dimensional: {
-            model_year: {
-            base: ["2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050"],
-          },
           subsector: {
-            base: ['unspecified'],
+            base: ['data_center'],
           },
           metric: {
             base: ['electricity_unspecified'],
           },
           sector: {
-            base: ['ind'],
+            base: ['com'],
               },
             },
           },

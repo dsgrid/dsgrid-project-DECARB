@@ -64,7 +64,7 @@
     {
       type: 'scenario',
       name: 'Reference',
-      display_name: 'DECARB High',
+      display_name: 'Reference',
       file: 'dimensions/scenario.csv',
       module: 'dsgrid.dimension.standard',
       class: 'Scenario',
