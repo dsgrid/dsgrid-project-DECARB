@@ -15,7 +15,7 @@
     {
       description: "DECARB Buildings model year to project model year",
       dimension_type: "model_year",
-      file: "../../../datasets/modeled/buildings/dimension_mappings/model_year_to_model_year.csv",
+      file: "dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "many_to_many_explicit_multipliers",
     },
   ]

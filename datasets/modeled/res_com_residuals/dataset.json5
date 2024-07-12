@@ -57,7 +57,7 @@
       type: "model_year",
       name: "DECARB 2023 Building Model Years",
       display_name: "DECARB 2023 Building Model Years",
-      file: "../../../datasets/modeled/buildings/dimensions/model_years.csv",
+      file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
       description: "Current year 2024 and future snapshot years 2030 and 2050",
