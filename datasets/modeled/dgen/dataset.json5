@@ -27,8 +27,7 @@
   ],
   trivial_dimensions: [
     "weather_year",
-    "scenario",
-    "subsector"
+    "scenario"
   ],
   use_project_geography_time_zone: true,
   data_schema: {
