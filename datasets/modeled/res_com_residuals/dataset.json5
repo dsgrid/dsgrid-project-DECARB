@@ -75,7 +75,7 @@
       type: "sector",
       name: "Building Sectors",
       display_name: "Building Sectors",
-      file: "../../../datasets/modeled/buildings/dimensions/sectors.csv",
+      file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
       description: "Building Sectors",

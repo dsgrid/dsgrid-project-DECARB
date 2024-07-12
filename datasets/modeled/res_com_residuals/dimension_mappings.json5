@@ -1,12 +1,6 @@
 {
   mappings: [
     {
-      description: "DECARB Buildings sectors to project sectors",
-      dimension_type: "sector",
-      file: "../../../datasets/modeled/buildings/dimension_mappings/sector_to_sector.csv",
-      mapping_type: "one_to_one",
-    },
-    {
       description: "DECARB Buildings EMM to project counties",
       dimension_type: "geography",
       file: "../../../datasets/modeled/buildings/dimension_mappings/emm_region_to_county.csv",
