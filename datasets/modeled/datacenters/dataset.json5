@@ -38,7 +38,7 @@
       type: "geography",
       name: "State",
       display_name: "State",
-      file: "../../../project/dimensions/supplemental/states.csv",
+      file: "../../../datasets/historical/eia_861_annual_energy_use_state_sector/dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "State",
       description: "US States L48",
