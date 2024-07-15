@@ -82,10 +82,10 @@
     {
       type: "subsector",
       class: "Subsector",
-      name: "Unspecified Subsectors",
-      display_name: "Unspecified Subsectors",
-      description: "unspecified subsectors",
-      file: "../../../datasets/modeled/buildings/dimensions/subsectors.csv",
+      name: "Data center",
+      display_name: "Data center",
+      description: "data center subsector",
+      file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
     },
     {
