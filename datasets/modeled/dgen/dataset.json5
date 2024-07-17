@@ -27,8 +27,7 @@
   ],
   trivial_dimensions: [
     "weather_year",
-    "scenario",
-    "subsector"
+    "scenario"
   ],
   use_project_geography_time_zone: true,
   data_schema: {
@@ -40,11 +39,11 @@
   },
   dimensions: [
     { 
-     "class": "County",
+     "class": "GeographyDimensionBaseModel",
       type: "geography",
       name: 'US Census tracts',
       display_name: "Census tracts",
-      file: "dimensions/dgen_tract.csv",
+      file: "dimensions/geography.csv",
       module: "dsgrid.dimension.standard",
       description: "US tracts for L48, Census 2010 vintage mapped to 2020 counties, no territories",
     },
@@ -59,18 +58,18 @@
     },
       {
         class: 'Subsector',
-        description: 'subsectors are not specified',
+        description: 'tilt and azimuth of systems specified as subsectors',
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
-        name: 'unspecified subsectors',
-        display_name: 'unspecified subsectors',
+        name: 'tilt azimuth subsectors',
+        display_name: 'tilt azimuth subsectors',
         type: 'subsector',
       },
     {
       type: "metric",
       name: "DPV generation",
       display_name: "DPV generation",
-      file: "dimensions/dpv_generation.csv",
+      file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       "class": "EnergyEndUse",
       description: "dGen DPV generation in kWh",
