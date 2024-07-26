@@ -76,8 +76,8 @@ def main():
     assert len(df_na)==0, f"df3 has na values: {df_na}"
 
     # QC and export
-    len(df2[["from_id", "to_id"]].compare(df3[["from_id", "to_id"]]))==0, "mapping does not have the expected rows."
-    df3.groupby("from_id")["from_fraction"].sum().round(5).unique().tolist() == [1], "from fraction does not equal to 1 when grouped by from_id"
+    assert len(df2[["from_id", "to_id"]].compare(df3[["from_id", "to_id"]]))==0, "mapping does not have the expected rows."
+    assert df3.groupby("from_id")["from_fraction"].sum().round(5).unique().tolist() == [1], "from fraction does not equal to 1 when grouped by from_id"
     df3.to_csv(state_to_county_file, index=False)
     print(f"Mapping file created: {state_to_county_file}")
 
