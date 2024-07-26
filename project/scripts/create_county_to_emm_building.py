@@ -38,7 +38,6 @@ def main():
     # create emm-to-county disaggregation map
     county_emm_map.columns = ["to_id", "from_id"]
     county_emm_map["from_fraction"] = county_emm_map["to_id"].map(load.set_index("county")["total_electricity"]).fillna(0)
-    county_emm_map.groupby("from_id")["from_fraction"].apply(lambda x: x/x.sum())
     county_emm_map["from_fraction"] = (county_emm_map.set_index("from_id")["from_fraction"] / county_emm_map.groupby("from_id")["from_fraction"].sum()).values
     assert county_emm_map.groupby("from_id")["from_fraction"].sum().round(5).unique().tolist() == [1], "from fraction does not equal to 1 when grouped by from_id"
     
