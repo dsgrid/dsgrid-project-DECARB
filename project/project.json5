@@ -275,7 +275,7 @@
                 class: 'Subsector',
                 name: 'DECARB 2023 Demand Subsectors',
                 display_name: 'Subsector',
-                description: 'DECARB 2023 Demand Subsectors; No breakouts for buildings, vehicles by class and range, 3-digit NAICS for most manufacturing',
+                description: 'DECARB 2023 Demand Subsectors; No breakouts for buildings, vehicles by class, 3-digit NAICS for most manufacturing',
                 file: 'dimensions/subsectors.csv',
                 module: 'dsgrid.dimension.standard',
             },
@@ -357,7 +357,7 @@
                     },
                     {
                         name: 'transportation_end_uses',
-                        description: 'Transportation LDV End Uses',
+                        description: 'Transportation End Uses',
                         column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
                     },
                     {
@@ -385,7 +385,7 @@
                     },
                     {
                         name: 'transportation_subsectors',
-                        description: 'Transportation LDV Subsectors',
+                        description: 'Transportation Subsectors',
                     },
                     {
                         name: 'industrial_subsectors',
