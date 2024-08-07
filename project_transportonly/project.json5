@@ -17,25 +17,22 @@
                     {
                         subsector: {
                             base: [
-                                'Personal_LDV+Compact+BEV_200', 'Personal_LDV+Compact+BEV_300',
+                                'Personal_LDV+Compact+BEV_200', 
+								'Personal_LDV+Compact+BEV_300',
                                 'Personal_LDV+Compact+BEV_400',
-                                'Personal_LDV+Compact+PHEV_25',
-                                'Personal_LDV+Compact+PHEV_50',
                                 'Personal_LDV+Midsize+BEV_200',
                                 'Personal_LDV+Midsize+BEV_300',
                                 'Personal_LDV+Midsize+BEV_400',
-                                'Personal_LDV+Midsize+PHEV_25',
-                                'Personal_LDV+Midsize+PHEV_50',
                                 'Personal_LDV+Pickup+BEV_200',
                                 'Personal_LDV+Pickup+BEV_300',
                                 'Personal_LDV+Pickup+BEV_400',
-                                'Personal_LDV+Pickup+PHEV_25',
-                                'Personal_LDV+Pickup+PHEV_50',
                                 'Personal_LDV+SUV+BEV_200',
                                 'Personal_LDV+SUV+BEV_300',
                                 'Personal_LDV+SUV+BEV_400',
-                                'Personal_LDV+SUV+PHEV_25',
-                                'Personal_LDV+SUV+PHEV_50',
+								'Personal_LDV+Compact+PHEV',
+								'Personal_LDV+Midsize+PHEV',
+								'Personal_LDV+Pickup+PHEV',
+								'Personal_LDV+SUV+PHEV',
                             ],
                         },
                         metric: {
@@ -50,7 +47,7 @@
                             base: ['__all__'],
                         }
                     },
-                    {
+					{
                         subsector: {
                             base: [
                                 'Truck_Heavy+Local+BEV_150',
@@ -83,21 +80,66 @@
                                 'Truck_Medium_Vocational+Local+BEV_300',
                                 'Truck_Medium_Vocational+Regional+BEV_150',
                                 'Truck_Medium_Vocational+Regional+BEV_300',
-                                'Bus+N/A+BEV_200',
+                                'Bus+Local+BEV_200',
                             ],
                         },
                         metric: {
                             base: [
-                                'electricity_ev_mhdv_depot_ac', 'electricity_ev_mhdv_depot_dc',
+                                'electricity_ev_mhdv_depot_ac', 
+								'electricity_ev_mhdv_depot_dc',
                                 'electricity_ev_mhdv_opportunity_dc',
                                 'electricity_ev_mhdv_enroute_dc',
                             ],
                         },
                         geography: {
-                            base: ['__all__'],
+                            base_missing: ["11001"]
                         }
                     },
-                    {
+                    					{
+                        subsector: {
+                            base: [
+                                'Truck_Heavy+Local+BEV_150',
+                                'Truck_Heavy+Local+BEV_300',
+                                'Truck_Heavy+Long-haul+BEV_300',
+                                'Truck_Heavy+Long-haul+BEV_500',
+                                'Truck_Heavy_Vocational+Local+BEV_150',
+                                'Truck_Heavy_Vocational+Local+BEV_300',
+                                'Truck_Heavy_Vocational+Regional+BEV_150',
+                                'Truck_Heavy_Vocational+Regional+BEV_300',
+                                'Truck_Light+Local+BEV_150',
+                                'Truck_Light+Local+BEV_300',
+                                'Truck_Light+Long-haul+BEV_300',
+                                'Truck_Light+Long-haul+BEV_500',
+                                'Truck_Light_Vocational+Local+BEV_150',
+                                'Truck_Light_Vocational+Local+BEV_300',
+                                'Truck_Light_Vocational+Regional+BEV_150',
+                                'Truck_Light_Vocational+Regional+BEV_300',
+                                'Truck_Medium+Local+BEV_150',
+                                'Truck_Medium+Local+BEV_300',
+                                'Truck_Medium+Long-haul+BEV_300',
+                                'Truck_Medium+Long-haul+BEV_500',
+                                'Truck_Medium_Vocational+Local+BEV_150',
+                                'Truck_Medium_Vocational+Local+BEV_300',
+								'Truck_Medium+Regional+BEV_150',
+                                'Truck_Medium+Regional+BEV_300',
+								'Truck_Medium_Vocational+Regional+BEV_150',
+                                'Truck_Medium_Vocational+Regional+BEV_300',
+								'Bus+Local+BEV_200',
+                            ],
+                        },
+                        metric: {
+                            base: [
+                                'electricity_ev_mhdv_depot_ac', 
+								'electricity_ev_mhdv_depot_dc',
+                                'electricity_ev_mhdv_opportunity_dc',
+                                'electricity_ev_mhdv_enroute_dc',
+                            ],
+                        },
+                        geography: {
+                            base: ["11001"]
+                        }
+                    },
+					{
                         subsector: {
                             base: ['Transit_Rail'],
                         },
@@ -200,35 +242,7 @@
             },
         ],
         subset_dimensions: [
-            {
-                name: 'End Uses by Sector',
-                display_name: 'end_uses_by_sector',
-                description: 'Selects end uses by sector',
-                type: 'metric',
-                file: 'dimensions/subset/end_uses_by_sector.csv',
-                create_supplemental_dimension: false,
-                selectors: [
-                    {
-                        name: 'transportation_end_uses',
-                        description: 'Transportation End Uses',
-                        column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
-                    }
-                ]
-            },
-            {
-                name: 'Subsectors by Sector',
-                display_name: 'subsectors_by_sector',
-                description: 'Selects subsectors by sector.',
-                type: 'subsector',
-                file: 'dimensions/subset/subsectors_by_sector.csv',
-                create_supplemental_dimension: false,
-                selectors: [
-                    {
-                        name: 'transportation_subsectors',
-                        description: 'Transportation Subsectors',
-                    }
-                ]
-            }
+
         ],
         supplemental_dimensions: [
             {
