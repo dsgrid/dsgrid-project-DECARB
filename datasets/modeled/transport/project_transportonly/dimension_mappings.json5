@@ -15,13 +15,13 @@
     {
       description: "county mapping to project counties - no data for 46102 Oglala Lakota SD (reflected in data with null time), and removing AK/HI",
       dimension_type: "geography",
-      file: "dimension_mappings/county_to_county.csv",
+      file: "../project/dimension_mappings/county_to_county.csv",
       mapping_type: "one_to_one",
     },
     {
       description: "TEMPO EVIX POLARIS model year to project model year, with fractions based on DECARB 2",
       dimension_type: "model_year",
-      file: "dimension_mappings/model_year_to_model_year.csv",
+      file: "../project/dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "many_to_many_explicit_multipliers",
     },
   ]
