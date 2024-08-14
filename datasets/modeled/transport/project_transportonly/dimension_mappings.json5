@@ -7,7 +7,7 @@
       mapping_type: "one_to_one",
     },
     {
-      description: "TEMPO EVIX POLARIS subsectors (detailed vehicle types) to project subsectors (BusNA renamed to BusLocal, and PHEVs aggregated)",
+      description: "TEMPO EVIX POLARIS subsectors (detailed vehicle types) to project subsectors (Bus+N/A renamed to Bus+Local, and PHEVs aggregated)",
       dimension_type: "subsector",
       file: "dimension_mappings/subsector_to_subsector.csv",
       mapping_type: "many_to_one_aggregation",
