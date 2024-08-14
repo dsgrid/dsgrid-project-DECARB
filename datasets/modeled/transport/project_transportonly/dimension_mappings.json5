@@ -1,7 +1,7 @@
 {
   mappings: [
       {
-      description: "rename scenarios with variations on EV charging behavior",
+      description: "Rename EV charging behavior scenarios",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
