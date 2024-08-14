@@ -316,9 +316,6 @@
                },
             },
             {
-                // For regional reporting - Census Division does not align well with
-                // EMM/eGrid/GEA regions, so only report groups of states at this much 
-                // higher level
                 type: 'geography',
                 class: 'CensusRegion',
                 name: 'Census Region',
