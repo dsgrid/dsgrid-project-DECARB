@@ -95,7 +95,7 @@
                             base_missing: ["11001"]
                         }
                     },
-                    					{
+					{
                         subsector: {
                             base: [
                                 'Truck_Heavy+Local+BEV_150',
@@ -150,7 +150,6 @@
             },
         },
     ],
-
     dimensions: {
         base_dimensions: [
             {
@@ -167,35 +166,35 @@
                 class: 'Sector',
                 name: 'Sectors - Transportation Only',
                 display_name: 'Sector',
-                description: 'DECARB 2023 Demand Sector; Transportation',
+                description: 'DECARB 2023 Transportation',
                 file: 'dimensions/sectors.csv',
                 module: 'dsgrid.dimension.standard',
             },
             {
                 type: 'subsector',
                 class: 'Subsector',
-                name: 'DECARB 2023 Transport Subsectors',
+                name: 'TEMPO EVIX POLARIS Transport Subsectors',
                 display_name: 'Subsector',
-                description: 'DECARB 2023 Demand Subsectors; Vehicle Class',
+                description: 'TEMPO EVIX POLARIS Transport Subsectors; Vehicle Class, Type, Powertrain, Range (where available)',
                 file: 'dimensions/subsectors.csv',
                 module: 'dsgrid.dimension.standard',
             },
             {
                 type: 'metric',
                 class: 'EnergyEndUse',
-                name: 'DECARB 2023 End Uses',
+                name: 'DECARB 2023 Transport End Uses',
                 display_name: 'End Use',
-                description: 'DECARB 2023 Demand End Uses; Charging Electricity Types',
+                description: 'DECARB 2023 Transport End Uses; Charging Locations and Levels, plus Transit Rail',
                 file: 'dimensions/enduses.csv',
                 module: 'dsgrid.dimension.standard',
             },
             {
                 type: 'model_year',
                 class: 'ModelYear',
-                name: 'DECARB 2023 Model Years',
+                name: 'TEMPO EVIX POLARIS Model Years',
                 display_name: 'Model Year',
-                description: 'DECARB 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
-                file: '../project/dimensions/model_years.csv',
+                description: 'TEMPO EVIX POLARIS Model Years; every 5 years 2025 to 2050',
+                file: 'dimensions/model_years.csv',
                 module: 'dsgrid.dimension.standard',
             },
             {
@@ -203,7 +202,7 @@
                 class: 'Scenario',
                 name: 'DECARB 2023 High-Resolution Demand Scenarios',
                 display_name: 'Scenario',
-                description: 'DECARB 2023 High-Resolution Demand Scenarios; DECARB High, with two charging behaviors: unmanaged and overnight slow',
+                description: 'DECARB 2023 High-Resolution Demand Scenarios; DECARB High, with two charging behaviors from TEMPO/EVIX/POLARIS modeling: Unmanaged and Overnight slow',
                 file: 'dimensions/scenarios.csv',
                 module: 'dsgrid.dimension.standard',
             },
@@ -237,9 +236,7 @@
                 module: 'dsgrid.dimension.standard',
             },
         ],
-        subset_dimensions: [
-
-        ],
+        subset_dimensions: [],
         supplemental_dimensions: [
             {
                 type: 'subsector',
