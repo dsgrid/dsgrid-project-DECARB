@@ -174,7 +174,7 @@
             {
                 type: 'subsector',
                 class: 'Subsector',
-                name: 'DECARB 2023 Demand Subsectors',
+                name: 'DECARB 2023 Transport Subsectors',
                 display_name: 'Subsector',
                 description: 'DECARB 2023 Demand Subsectors; Vehicle Class',
                 file: 'dimensions/subsectors.csv',
