@@ -18,7 +18,7 @@
                         subsector: {
                             base: [
                                 'Personal_LDV+Compact+BEV_200', 
-								'Personal_LDV+Compact+BEV_300',
+                'Personal_LDV+Compact+BEV_300',
                                 'Personal_LDV+Compact+BEV_400',
                                 'Personal_LDV+Midsize+BEV_200',
                                 'Personal_LDV+Midsize+BEV_300',
@@ -29,10 +29,10 @@
                                 'Personal_LDV+SUV+BEV_200',
                                 'Personal_LDV+SUV+BEV_300',
                                 'Personal_LDV+SUV+BEV_400',
-								'Personal_LDV+Compact+PHEV',
-								'Personal_LDV+Midsize+PHEV',
-								'Personal_LDV+Pickup+PHEV',
-								'Personal_LDV+SUV+PHEV',
+                'Personal_LDV+Compact+PHEV',
+                'Personal_LDV+Midsize+PHEV',
+                'Personal_LDV+Pickup+PHEV',
+                'Personal_LDV+SUV+PHEV',
                             ],
                         },
                         metric: {
@@ -47,7 +47,7 @@
                             base: ['__all__'],
                         }
                     },
-					{
+          {
                         subsector: {
                             base: [
                                 'Truck_Heavy+Local+BEV_150',
@@ -86,7 +86,7 @@
                         metric: {
                             base: [
                                 'electricity_ev_mhdv_depot_ac', 
-								'electricity_ev_mhdv_depot_dc',
+                'electricity_ev_mhdv_depot_dc',
                                 'electricity_ev_mhdv_opportunity_dc',
                                 'electricity_ev_mhdv_enroute_dc',
                             ],
@@ -95,7 +95,7 @@
                             base_missing: ["11001"]
                         }
                     },
-					{
+          {
                         subsector: {
                             base: [
                                 'Truck_Heavy+Local+BEV_150',
@@ -116,17 +116,17 @@
                                 'Truck_Medium+Long-haul+BEV_500',
                                 'Truck_Medium_Vocational+Local+BEV_150',
                                 'Truck_Medium_Vocational+Local+BEV_300',
-								'Truck_Medium+Regional+BEV_150',
+                'Truck_Medium+Regional+BEV_150',
                                 'Truck_Medium+Regional+BEV_300',
-								'Truck_Medium_Vocational+Regional+BEV_150',
+                'Truck_Medium_Vocational+Regional+BEV_150',
                                 'Truck_Medium_Vocational+Regional+BEV_300',
-								'Bus+Local+BEV_200',
+                'Bus+Local+BEV_200',
                             ],
                         },
                         metric: {
                             base: [
                                 'electricity_ev_mhdv_depot_ac', 
-								'electricity_ev_mhdv_depot_dc',
+                'electricity_ev_mhdv_depot_dc',
                                 'electricity_ev_mhdv_opportunity_dc',
                                 'electricity_ev_mhdv_enroute_dc',
                             ],
@@ -135,7 +135,7 @@
                             base: ["11001"]
                         }
                     },
-					{
+          {
                         subsector: {
                             base: ['Transit_Rail'],
                         },
@@ -236,11 +236,26 @@
                 module: 'dsgrid.dimension.standard',
             },
         ],
-        subset_dimensions: [],
+        subset_dimensions: [
+          {
+            name: 'End Uses by Fuel Type',
+            display_name: 'end_uses_by_fuel_type',
+            description: 'Provides selection of end uses by fuel type.',
+            type: 'metric',
+            filename: 'dimensions/subset/end_uses_by_fuel_type.csv',
+            selectors: [
+              {
+                name: 'electricity_end_uses',
+                description: 'All Electric End Uses',
+                column_values: {'fuel_id': 'electricity', 'unit': 'MWh'},
+              },
+            ],
+          },
+        ],
         supplemental_dimensions: [
             {
                 type: 'subsector',
-				class: 'Subsector',
+        class: 'Subsector',
                 description: 'Simplified Vehicle Types',
                 file: 'dimensions/supplemental/simplified_vehicle_types.csv',
                 module: 'dsgrid.dimension.standard',
@@ -250,9 +265,9 @@
                     description: 'Maps Detailed Vehicle Types to Simplified Vehicle Types',
                     file: 'dimension_mappings/lookup_subsector_to_simplified_vehicle_type.csv',
                     mapping_type: 'many_to_one_aggregation',
-				},
+        },
             },
-			{
+      {
                 class: 'State',
                 description: 'US States L48',
                 file: '../project/dimensions/supplemental/states.csv',
