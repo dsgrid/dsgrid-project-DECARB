@@ -39,10 +39,10 @@
       type: "geography",
       name: "State",
       display_name: "State",
-      file: "../../../datasets/modeled/industry/dimensions/states.csv",
+      file: "dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "State",
-      description: "US States and DC",
+      description: "US States and DC excluding AK, HI",
     },
     {
       type: "metric",
@@ -65,10 +65,10 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "DECARB GCAM Scenarios",
+      name: "DECARB 2023 High-Resolution Demand Scenarios",
       display_name: "High-Resolution Demand Scenarios",
-      description: "DECARB Year 1 Task 4 GCAM Scenarios",
-      file: "../../../datasets/industry/dimensions/scenarios.csv",
+      description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
+      file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
