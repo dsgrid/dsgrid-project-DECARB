@@ -7,16 +7,16 @@
       mapping_type: "one_to_one",
     },
     {
-      description: "DECARB Buildings EMM to project counties",
+      description: "DECARB Buildings BuildStock counties to project counties",
       dimension_type: "geography",
-      file: "dimension_mappings/emm_region_to_county.csv",
-      mapping_type: "one_to_many_disaggregation",
+      file: "dimension_mappings/counties.csv",
+      mapping_type: "one_to_one",
     },
     {
       description: "DECARB Buildings model year to project model year",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
-      mapping_type: "many_to_many_explicit_multipliers",
+      mapping_type: "one_to_one",
     },
   ]
 }

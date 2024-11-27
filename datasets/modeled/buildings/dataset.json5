@@ -52,7 +52,7 @@
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
-      description: "Scout residential and commercial end uses (N=13) based on EIA Annual Energy Outlook",
+      description: "Scout residential and commercial end uses (N=9) based on EIA Annual Energy Outlook",
     },
     {
       type: "model_year",
